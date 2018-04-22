@@ -1,9 +1,10 @@
 package org.research.iot.communication.hub;
 
-import java.util.logging.Logger;
 
 import org.research.iot.communication.hub.service.AkkaService;
 import org.research.iot.communication.hub.service.SwingAppService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -12,7 +13,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 public class CommunicationHubApplication {
 
-	private static final Logger LOGGER = Logger.getLogger(CommunicationHubApplication.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(CommunicationHubApplication.class);
 
 	@Autowired
 	private SwingAppService swingAppService;

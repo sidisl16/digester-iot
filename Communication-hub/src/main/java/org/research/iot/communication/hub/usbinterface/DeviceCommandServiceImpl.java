@@ -2,17 +2,18 @@ package org.research.iot.communication.hub.usbinterface;
 
 import java.util.List;
 
-import org.jboss.logging.Logger;
 import org.research.iot.communication.hub.constants.DeviceCommands;
 import org.research.iot.communication.hub.service.DeviceCommandService;
 import org.research.iot.communication.hub.service.SerialCommunicationService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class DeviceCommandServiceImpl implements DeviceCommandService{
 	
-	private static Logger logger = Logger.getLogger(DeviceCommandServiceImpl.class);
+	private static Logger logger = LoggerFactory.getLogger(DeviceCommandServiceImpl.class);
 
 	@Autowired
 	private SerialCommunicationService serialCommunicationService;

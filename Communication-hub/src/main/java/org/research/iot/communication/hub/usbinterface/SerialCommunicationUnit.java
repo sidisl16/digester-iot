@@ -7,9 +7,11 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
 
-import org.jboss.logging.Logger;
+
 import org.research.iot.communication.hub.service.AkkaService;
 import org.research.iot.communication.hub.service.SerialCommunicationService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +24,7 @@ import gnu.io.SerialPortEventListener;
 @Service
 public class SerialCommunicationUnit implements SerialCommunicationService, SerialPortEventListener {
 
-	private static Logger logger = Logger.getLogger(SerialCommunicationUnit.class);
+	private static Logger logger = LoggerFactory.getLogger(SerialCommunicationUnit.class);
 	private BufferedReader input;
 	private OutputStream output;
 	private SerialPort serialPort;

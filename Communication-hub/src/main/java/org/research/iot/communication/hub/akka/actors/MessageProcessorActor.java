@@ -4,9 +4,10 @@ import java.io.IOException;
 
 import javax.annotation.PostConstruct;
 
-import org.jboss.logging.Logger;
 import org.research.iot.communication.hub.model.Reading;
 import org.research.iot.communication.hub.service.SwingAppService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -19,7 +20,7 @@ import akka.actor.UntypedActor;
 @Scope("prototype")
 public class MessageProcessorActor extends UntypedActor {
 
-	private static Logger logger = Logger.getLogger(MessageProcessorActor.class);
+	private static Logger logger = LoggerFactory.getLogger(MessageProcessorActor.class);
 	private ObjectMapper objectMapper;
 
 	@Autowired
