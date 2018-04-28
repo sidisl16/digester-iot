@@ -1,5 +1,8 @@
 package org.research.iot.communication.hub.model;
 
+import org.springframework.data.elasticsearch.annotations.Document;
+
+@Document(indexName = "sensors", type = "readings")
 public class Reading {
 
 	private float temperature1;
@@ -7,18 +10,25 @@ public class Reading {
 	private float ph;
 	private float gasFlowRate;
 	private float moisture;
+	private long recordedTime;
+	private long loadedTime;
 
 	public Reading() {
 	}
 
-	public Reading(float temperature1, float temperature2, float ph, float gasFlowRate, float moisture) {
+	
+	public Reading(float temperature1, float temperature2, float ph, float gasFlowRate, float moisture,
+			long recordedTime, long loadedTime) {
 		super();
 		this.temperature1 = temperature1;
 		this.temperature2 = temperature2;
 		this.ph = ph;
 		this.gasFlowRate = gasFlowRate;
 		this.moisture = moisture;
+		this.recordedTime = recordedTime;
+		this.loadedTime = loadedTime;
 	}
+
 
 	public float getTemperature1() {
 		return temperature1;
@@ -60,10 +70,33 @@ public class Reading {
 		this.moisture = moisture;
 	}
 
+
+	public long getRecordedTime() {
+		return recordedTime;
+	}
+
+
+	public void setRecordedTime(long recordedTime) {
+		this.recordedTime = recordedTime;
+	}
+
+
+	public long getLoadedTime() {
+		return loadedTime;
+	}
+
+
+	public void setLoadedTime(long loadedTime) {
+		this.loadedTime = loadedTime;
+	}
+
+
 	@Override
 	public String toString() {
 		return "Reading [temperature1=" + temperature1 + ", temperature2=" + temperature2 + ", ph=" + ph
-				+ ", gasFlowRate=" + gasFlowRate + ", moisture=" + moisture + "]";
+				+ ", gasFlowRate=" + gasFlowRate + ", moisture=" + moisture + ", recordedTime=" + recordedTime
+				+ ", loadedTime=" + loadedTime + "]";
 	}
+	
 	
 }
