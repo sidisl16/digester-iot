@@ -24,6 +24,7 @@ import org.springframework.stereotype.Component;
 import javax.swing.JToggleButton;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
+import javax.swing.UIManager;
 
 @Component
 public class ControllerUnitGUI implements SwingAppService {
@@ -40,13 +41,16 @@ public class ControllerUnitGUI implements SwingAppService {
 	private JComboBox<String> comboBoxComPorts;
 	private JButton btnConnect;
 	private boolean isConnected;
-
+	private JTextField commandStatustextField;
+	private JTextField commandStatusColortextField;
+	
 	private static final String BTN_CONNECT = "Connect";
 	private static final String BTN_DISCONNECT = "Disconnect";
 
 	@Autowired
 	private DeviceCommandService commandService;
-	private final Action action = new SwingAction();
+	
+
 
 	/**
 	 * Launch the application.
@@ -273,6 +277,29 @@ public class ControllerUnitGUI implements SwingAppService {
 		panel_2.setBounds(343, 139, 412, 155);
 		frmDeviceMonitorAnd.getContentPane().add(panel_2);
 		
+		JLabel lblDeviceCommandStatus = new JLabel("Device Command Status:");
+		lblDeviceCommandStatus.setBounds(360, 324, 200, 14);
+		frmDeviceMonitorAnd.getContentPane().add(lblDeviceCommandStatus);
+		
+		commandStatustextField = new JTextField();
+		commandStatustextField.setEditable(false);
+		commandStatustextField.setColumns(10);
+		commandStatustextField.setBackground(Color.WHITE);
+		commandStatustextField.setBounds(558, 321, 146, 20);
+		frmDeviceMonitorAnd.getContentPane().add(commandStatustextField);
+		
+		commandStatusColortextField = new JTextField();
+		commandStatusColortextField.setEditable(false);
+		commandStatusColortextField.setColumns(10);
+		commandStatusColortextField.setBackground(Color.WHITE);
+		commandStatusColortextField.setBounds(714, 321, 16, 20);
+		frmDeviceMonitorAnd.getContentPane().add(commandStatusColortextField);
+		
+		JPanel panel_3 = new JPanel();
+		panel_3.setBorder(new TitledBorder(null, "Device ACK", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		panel_3.setBounds(343, 305, 412, 53);
+		frmDeviceMonitorAnd.getContentPane().add(panel_3);
+		
 		
 	}
 
@@ -311,15 +338,18 @@ public class ControllerUnitGUI implements SwingAppService {
 		texttemp2.setText(String.valueOf(reading.getTemperature2()));
 		textPh.setText(String.valueOf(reading.getPh()));
 		textMoisture.setText(String.valueOf(reading.getMoisture()));
-		textGasFlowRate.setText(String.valueOf(reading.getMoisture()));
+		textGasFlowRate.setText(String.valueOf(reading.getGasFlowRate()));
 
 	}
-	private class SwingAction extends AbstractAction {
-		public SwingAction() {
-			putValue(NAME, "SwingAction");
-			putValue(SHORT_DESCRIPTION, "Some short description");
-		}
-		public void actionPerformed(ActionEvent e) {
+	
+	@Override
+	public void setCommandStatus(String command,String status) {
+		commandStatustextField.setText(command);
+		if(status.equals("SUCCESS")) {
+			commandStatusColortextField.setBackground(Color.GREEN);
+		}else if(status.equals("FAILED")) {
+			commandStatusColortextField.setBackground(Color.RED);
 		}
 	}
+	
 }

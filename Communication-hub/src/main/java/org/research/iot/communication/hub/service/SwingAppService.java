@@ -11,4 +11,6 @@ public interface SwingAppService {
 	void changeState();
 
 	void setPayload(Reading reading);
+
+	void setCommandStatus(String command, String status);
 }
