@@ -1,24 +1,38 @@
 package org.research.iot.communication.hub.model;
 
+import java.util.Date;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.DateFormat;
 import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldIndex;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 
 @Document(indexName = "sensors", type = "readings")
 public class Reading {
 
+	@Id
+	private String id;
 	private float temperature1;
 	private float temperature2;
 	private float ph;
 	private float gasFlowRate;
 	private float moisture;
-	private long recordedTime;
+	
+	@Field(type = FieldType.Date)
+	private Date recordedTime;
 	private long deviceMillis;
 
 	public Reading() {
 	}
 
-	public Reading(float temperature1, float temperature2, float ph, float gasFlowRate, float moisture,
-			long recordedTime, long deviceMillis) {
+	
+	
+	public Reading(String id, float temperature1, float temperature2, float ph, float gasFlowRate, float moisture,
+			Date recordedTime, long deviceMillis) {
 		super();
+		this.id = id;
 		this.temperature1 = temperature1;
 		this.temperature2 = temperature2;
 		this.ph = ph;
@@ -26,6 +40,16 @@ public class Reading {
 		this.moisture = moisture;
 		this.recordedTime = recordedTime;
 		this.deviceMillis = deviceMillis;
+	}
+
+
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public float getTemperature1() {
@@ -68,11 +92,11 @@ public class Reading {
 		this.moisture = moisture;
 	}
 
-	public long getRecordedTime() {
+	public Date getRecordedTime() {
 		return recordedTime;
 	}
 
-	public void setRecordedTime(long recordedTime) {
+	public void setRecordedTime(Date recordedTime) {
 		this.recordedTime = recordedTime;
 	}
 
@@ -84,11 +108,12 @@ public class Reading {
 		this.deviceMillis = loadedTime;
 	}
 
+
+
 	@Override
 	public String toString() {
-		return "Reading [temperature1=" + temperature1 + ", temperature2=" + temperature2 + ", ph=" + ph
+		return "Reading [id=" + id + ", temperature1=" + temperature1 + ", temperature2=" + temperature2 + ", ph=" + ph
 				+ ", gasFlowRate=" + gasFlowRate + ", moisture=" + moisture + ", recordedTime=" + recordedTime
 				+ ", deviceMillis=" + deviceMillis + "]";
 	}
-
 }

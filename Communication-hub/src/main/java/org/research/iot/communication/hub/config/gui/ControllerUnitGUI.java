@@ -14,6 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.JToggleButton;
 import javax.swing.border.TitledBorder;
 
 import org.research.iot.communication.hub.model.Reading;
@@ -21,10 +22,6 @@ import org.research.iot.communication.hub.service.DeviceCommandService;
 import org.research.iot.communication.hub.service.SwingAppService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import javax.swing.JToggleButton;
-import javax.swing.AbstractAction;
-import javax.swing.Action;
-import javax.swing.UIManager;
 
 @Component
 public class ControllerUnitGUI implements SwingAppService {

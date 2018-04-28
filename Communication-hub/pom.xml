@@ -14,8 +14,8 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.0.RC2</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<version>1.5.1.RELEASE</version>
+		<relativePath /> <!--2.0.0.RC2 lookup parent from repository -->
 	</parent>
 
 	<properties>
@@ -30,32 +30,13 @@
 			<artifactId>spring-boot-starter-data-elasticsearch</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>net.java.dev.jna</groupId>
+			<artifactId>jna</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.pi4j</groupId>
-			<artifactId>pi4j-parent</artifactId>
-			<version>1.0</version>
-			<type>pom</type>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.usb4java/usb4java -->
-		<dependency>
-			<groupId>org.usb4java</groupId>
-			<artifactId>usb4java</artifactId>
-			<version>1.2.0</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.pi4j/pi4j-core -->
-		<dependency>
-			<groupId>com.pi4j</groupId>
-			<artifactId>pi4j-core</artifactId>
-			<version>1.0</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.pi4j/pi4j-device -->
-		<dependency>
-			<groupId>com.pi4j</groupId>
-			<artifactId>pi4j-device</artifactId>
-			<version>0.0.5</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.rxtx/rxtx -->
 		<dependency>

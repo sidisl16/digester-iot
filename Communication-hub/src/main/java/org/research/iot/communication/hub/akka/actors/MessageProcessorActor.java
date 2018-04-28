@@ -7,6 +7,7 @@ import javax.annotation.PostConstruct;
 
 import org.research.iot.communication.hub.model.DeviceACK;
 import org.research.iot.communication.hub.model.Reading;
+import org.research.iot.communication.hub.service.ElasticSearchService;
 import org.research.iot.communication.hub.service.MessageProcessorService;
 import org.research.iot.communication.hub.service.SwingAppService;
 import org.slf4j.Logger;
@@ -28,6 +29,9 @@ public class MessageProcessorActor extends UntypedActor implements MessageProces
 
 	@Autowired
 	private SwingAppService swingAppService;
+
+	@Autowired
+	private ElasticSearchService elasticSearchService;
 
 	@PostConstruct
 	public void init() {
@@ -53,6 +57,7 @@ public class MessageProcessorActor extends UntypedActor implements MessageProces
 				Object message = objectMapper.readValue(messageRaw, Reading.class);
 				if (message instanceof Reading) {
 					Reading reading = (Reading) message;
+					saveToElasticSearch(reading);
 					sendReadingstoSwingApp(reading);
 				}
 			}
@@ -63,6 +68,15 @@ public class MessageProcessorActor extends UntypedActor implements MessageProces
 
 	private void sendReadingstoSwingApp(Reading reading) {
 		swingAppService.setPayload(reading);
+	}
+
+	private void saveToElasticSearch(Reading reading) {
+		try {
+			elasticSearchService.saveReadings(reading);
+			logger.info("Reading stored in elastic search!");
+		} catch (Exception e) {
+			logger.error("Unable to persist reading on elastic search, reason -> {}", e.getMessage());
+		}
 	}
 
 }
