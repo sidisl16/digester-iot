@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
 
-
 import org.research.iot.communication.hub.service.AkkaService;
 import org.research.iot.communication.hub.service.SerialCommunicationService;
 import org.slf4j.Logger;

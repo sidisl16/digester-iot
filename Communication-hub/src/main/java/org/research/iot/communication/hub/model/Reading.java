@@ -11,14 +11,13 @@ public class Reading {
 	private float gasFlowRate;
 	private float moisture;
 	private long recordedTime;
-	private long loadedTime;
+	private long deviceMillis;
 
 	public Reading() {
 	}
 
-	
 	public Reading(float temperature1, float temperature2, float ph, float gasFlowRate, float moisture,
-			long recordedTime, long loadedTime) {
+			long recordedTime, long deviceMillis) {
 		super();
 		this.temperature1 = temperature1;
 		this.temperature2 = temperature2;
@@ -26,9 +25,8 @@ public class Reading {
 		this.gasFlowRate = gasFlowRate;
 		this.moisture = moisture;
 		this.recordedTime = recordedTime;
-		this.loadedTime = loadedTime;
+		this.deviceMillis = deviceMillis;
 	}
-
 
 	public float getTemperature1() {
 		return temperature1;
@@ -70,33 +68,27 @@ public class Reading {
 		this.moisture = moisture;
 	}
 
-
 	public long getRecordedTime() {
 		return recordedTime;
 	}
-
 
 	public void setRecordedTime(long recordedTime) {
 		this.recordedTime = recordedTime;
 	}
 
-
-	public long getLoadedTime() {
-		return loadedTime;
+	public long getDeviceMillis() {
+		return deviceMillis;
 	}
 
-
-	public void setLoadedTime(long loadedTime) {
-		this.loadedTime = loadedTime;
+	public void setDeviceMillis(long loadedTime) {
+		this.deviceMillis = loadedTime;
 	}
-
 
 	@Override
 	public String toString() {
 		return "Reading [temperature1=" + temperature1 + ", temperature2=" + temperature2 + ", ph=" + ph
 				+ ", gasFlowRate=" + gasFlowRate + ", moisture=" + moisture + ", recordedTime=" + recordedTime
-				+ ", loadedTime=" + loadedTime + "]";
+				+ ", deviceMillis=" + deviceMillis + "]";
 	}
-	
-	
+
 }
