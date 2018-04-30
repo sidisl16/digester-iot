@@ -6,15 +6,21 @@
 #define SHAFT_SWITCH "SHAFT_SWITCH;"
 #define SHAFT_SPEED "SHAFT_SPEED;"
 
+//Pin decleration
+const int PHANALOGIN = A0; 
+
+
+int sensorValue = 0; 
+unsigned long int avgValue; 
+float b;
+int buf[10],temp;
 
 int connected = 0;
 int polling = 2000;
-long timestamp = 0;
-char buf[100];
+
 
 void setup() {
  Serial.begin(115200);
-
 }
 
 
@@ -32,6 +38,33 @@ void processCommand(String command) {
 }
 
 
+float getPhReading() {
+ for(int i=0;i<10;i++) 
+ { 
+  buf[i]=analogRead(PHANALOGIN);
+  delay(10);
+ }
+ for(int i=0;i<9;i++)
+ {
+  for(int j=i+1;j<10;j++)
+  {
+   if(buf[i]>buf[j])
+   {
+    temp=buf[i];
+    buf[i]=buf[j];
+    buf[j]=temp;
+   }
+  }
+ }
+ avgValue=0;
+ for(int i=2;i<8;i++)
+ avgValue+=buf[i];
+ float pHVol=(float)avgValue*5.0/1024/6;
+ float phValue = -5.70 * pHVol + 21.34;
+ return phValue;
+}
+
+
 String formJSONMessage(float temp1, float temp2, float ph, float flowRate, float moisture, long timeMillis) {
 
   String message = "";
@@ -39,7 +72,7 @@ String formJSONMessage(float temp1, float temp2, float ph, float flowRate, float
   String startMessage = "{";
   String deviceMillis = "\"deviceMillis\":";
   String temp1Message = ",\"temperature1\":";
-  String temp2Message = ",\"temperature1\":";
+  String temp2Message = ",\"temperature2\":";
   String phMessage = ",\"ph\":";
   String flowRateMessage = ",\"gasFlowRate\":";
   String moistureMessage = ",\"moisture\":";
@@ -68,7 +101,7 @@ void sendReadings(){
   if(connected == 1) {
     float temp1 = 95.0;
     float temp2 = 95.0;
-    float ph = 7.0;
+    float ph = getPhReading();//7.0;
     float flowRate = 10;
     float moisture = 600;
     long timeMillis = millis();
