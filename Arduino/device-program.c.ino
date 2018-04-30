@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <OneWire.h> 
+#include <DallasTemperature.h>
 
 #define DEV_CON_CMD "CONNECT"
 #define DEV_DISCON_CMD "DISCONNECT"
@@ -8,12 +10,17 @@
 
 //Pin decleration
 const int PHANALOGIN = A0; 
+const int TEMP1DIGIN = 2; 
+
 
 
 int sensorValue = 0; 
 unsigned long int avgValue; 
 float b;
 int buf[10],temp;
+
+OneWire oneWire(TEMP1DIGIN);
+DallasTemperature sensors(&oneWire);
 
 int connected = 0;
 int polling = 2000;
@@ -64,6 +71,13 @@ float getPhReading() {
  return phValue;
 }
 
+float getTemp1Reading() 
+{ 
+ sensors.requestTemperatures(); // Send the command to get temperature readings 
+ float tempInC = sensors.getTempCByIndex(0); 
+ return (tempInC * 1.8 + 32);
+} 
+
 
 String formJSONMessage(float temp1, float temp2, float ph, float flowRate, float moisture, long timeMillis) {
 
@@ -92,14 +106,13 @@ String formJSONMessage(float temp1, float temp2, float ph, float flowRate, float
   message.concat(moistureMessage);
   message.concat(moisture);
   message.concat(endMessage);
-
   return message;
 }
 
 void sendReadings(){
   
   if(connected == 1) {
-    float temp1 = 95.0;
+    float temp1 = getTemp1Reading();//95.0;
     float temp2 = 95.0;
     float ph = getPhReading();//7.0;
     float flowRate = 10;
