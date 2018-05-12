@@ -10,21 +10,21 @@
 
 //Pin decleration
 const int PHANALOGIN = A0; 
+const int MOISTUREANALOGIN = A1; 
 const int TEMP1DIGIN = 2; 
-
+const int TEMP2DIGIN = 3; 
 
 
 int sensorValue = 0; 
+int moistureCalliberatedvalue = 680;
 unsigned long int avgValue; 
 float b;
 int buf[10],temp;
-
-OneWire oneWire(TEMP1DIGIN);
-DallasTemperature sensors(&oneWire);
-
 int connected = 0;
 int polling = 2000;
 
+OneWire oneWire(TEMP1DIGIN);
+DallasTemperature sensors(&oneWire);
 
 void setup() {
  Serial.begin(115200);
@@ -44,6 +44,11 @@ void processCommand(String command) {
   }
 }
 
+
+int getMoistureReading() {
+  int sensorValue = analogRead(MOISTUREANALOGIN);
+  return (moistureCalliberatedvalue - sensorValue);
+}
 
 float getPhReading() {
  for(int i=0;i<10;i++) 
@@ -114,9 +119,9 @@ void sendReadings(){
   if(connected == 1) {
     float temp1 = getTemp1Reading();//95.0;
     float temp2 = 95.0;
-    float ph = getPhReading();//7.0;
+    float ph =  getPhReading();//7.0;
     float flowRate = 10;
-    float moisture = 600;
+    float moisture = getMoistureReading();//600;
     long timeMillis = millis();
     String message = formJSONMessage(temp1,temp2,ph,flowRate,moisture,timeMillis);
 
