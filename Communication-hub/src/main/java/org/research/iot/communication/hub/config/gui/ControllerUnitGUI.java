@@ -209,6 +209,7 @@ public class ControllerUnitGUI implements SwingAppService {
 		frmDeviceMonitorAnd.getContentPane().add(lblPollingIntervaldefault);
 
 		JLabel lblShaftSpeeddefault = new JLabel("Shaft Speed (Default 20 RPM):");
+		lblShaftSpeeddefault.setEnabled(false);
 		lblShaftSpeeddefault.setBounds(360, 248, 200, 14);
 		frmDeviceMonitorAnd.getContentPane().add(lblShaftSpeeddefault);
 
@@ -219,6 +220,7 @@ public class ControllerUnitGUI implements SwingAppService {
 		frmDeviceMonitorAnd.getContentPane().add(textPolling);
 
 		textShaftSpeed = new JTextField();
+		textShaftSpeed.setEnabled(false);
 		textShaftSpeed.setColumns(10);
 		textShaftSpeed.setBackground(Color.WHITE);
 		textShaftSpeed.setBounds(560, 245, 86, 20);
@@ -247,14 +249,17 @@ public class ControllerUnitGUI implements SwingAppService {
 		frmDeviceMonitorAnd.getContentPane().add(btnPolling);
 
 		JButton btnShaftSpeed = new JButton("Set");
+		btnShaftSpeed.setEnabled(false);
 		btnShaftSpeed.setBounds(675, 244, 60, 23);
 		frmDeviceMonitorAnd.getContentPane().add(btnShaftSpeed);
 		
 		JLabel shaftlabelswitch = new JLabel("Shaft Switch :");
+		shaftlabelswitch.setEnabled(false);
 		shaftlabelswitch.setBounds(360, 208, 200, 14);
 		frmDeviceMonitorAnd.getContentPane().add(shaftlabelswitch);
 		
 		JToggleButton tglbtnShaftSwitch = new JToggleButton("OFF");
+		tglbtnShaftSwitch.setEnabled(false);
 		tglbtnShaftSwitch.setBounds(675, 200, 60, 23);
 		tglbtnShaftSwitch.addActionListener(new ActionListener() {
 			@Override
