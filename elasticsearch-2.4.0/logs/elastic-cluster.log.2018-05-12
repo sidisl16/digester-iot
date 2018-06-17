@@ -1,0 +1,59 @@
+[2018-05-12 18:07:37,751][INFO ][node                     ] [Wendell Vaughn] version[2.4.0], pid[5824], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-05-12 18:07:37,753][INFO ][node                     ] [Wendell Vaughn] initializing ...
+[2018-05-12 18:07:38,017][INFO ][plugins                  ] [Wendell Vaughn] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-05-12 18:07:38,029][INFO ][env                      ] [Wendell Vaughn] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412.1gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-05-12 18:07:38,030][INFO ][env                      ] [Wendell Vaughn] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-05-12 18:07:39,011][INFO ][node                     ] [Wendell Vaughn] initialized
+[2018-05-12 18:07:39,011][INFO ][node                     ] [Wendell Vaughn] starting ...
+[2018-05-12 18:07:39,221][INFO ][transport                ] [Wendell Vaughn] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-05-12 18:07:39,257][INFO ][discovery                ] [Wendell Vaughn] elastic-cluster/vXKe8sjeSFW9JVKHOMlp3w
+[2018-05-12 18:07:43,325][INFO ][cluster.service          ] [Wendell Vaughn] new_master {Wendell Vaughn}{vXKe8sjeSFW9JVKHOMlp3w}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-05-12 18:07:43,524][INFO ][http                     ] [Wendell Vaughn] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-05-12 18:07:43,524][INFO ][node                     ] [Wendell Vaughn] started
+[2018-05-12 18:07:43,601][INFO ][gateway                  ] [Wendell Vaughn] recovered [1] indices into cluster_state
+[2018-05-12 18:07:45,010][INFO ][cluster.routing.allocation] [Wendell Vaughn] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][4]] ...]).
+[2018-05-12 18:23:14,940][INFO ][node                     ] [Wendell Vaughn] stopping ...
+[2018-05-12 18:23:15,270][DEBUG][action.admin.cluster.node.stats] [Wendell Vaughn] failed to execute on node [vXKe8sjeSFW9JVKHOMlp3w]
+SendRequestTransportException[[Wendell Vaughn][127.0.0.1:9300][cluster:monitor/nodes/stats[n]]]; nested: TransportException[TransportService is closed stopped can't send request];
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:340)
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction.start(TransportNodesAction.java:165)
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction.access$100(TransportNodesAction.java:107)
+	at org.elasticsearch.action.support.nodes.TransportNodesAction.doExecute(TransportNodesAction.java:77)
+	at org.elasticsearch.action.support.nodes.TransportNodesAction.doExecute(TransportNodesAction.java:46)
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:137)
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:85)
+	at org.elasticsearch.cluster.InternalClusterInfoService.updateNodeStats(InternalClusterInfoService.java:289)
+	at org.elasticsearch.cluster.InternalClusterInfoService.refresh(InternalClusterInfoService.java:325)
+	at org.elasticsearch.cluster.InternalClusterInfoService.maybeRefresh(InternalClusterInfoService.java:310)
+	at org.elasticsearch.cluster.InternalClusterInfoService.access$600(InternalClusterInfoService.java:69)
+	at org.elasticsearch.cluster.InternalClusterInfoService$SubmitReschedulingClusterInfoUpdatedJob$1.run(InternalClusterInfoService.java:255)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: TransportException[TransportService is closed stopped can't send request]
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:320)
+	... 14 more
+[2018-05-12 18:23:15,270][DEBUG][action.admin.indices.stats] [Wendell Vaughn] failed to execute [indices:monitor/stats] on node [vXKe8sjeSFW9JVKHOMlp3w]
+SendRequestTransportException[[Wendell Vaughn][127.0.0.1:9300][indices:monitor/stats[n]]]; nested: TransportException[TransportService is closed stopped can't send request];
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:340)
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:299)
+	at org.elasticsearch.action.support.broadcast.node.TransportBroadcastByNodeAction$AsyncAction.sendNodeRequest(TransportBroadcastByNodeAction.java:327)
+	at org.elasticsearch.action.support.broadcast.node.TransportBroadcastByNodeAction$AsyncAction.start(TransportBroadcastByNodeAction.java:315)
+	at org.elasticsearch.action.support.broadcast.node.TransportBroadcastByNodeAction.doExecute(TransportBroadcastByNodeAction.java:238)
+	at org.elasticsearch.action.support.broadcast.node.TransportBroadcastByNodeAction.doExecute(TransportBroadcastByNodeAction.java:79)
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:137)
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:85)
+	at org.elasticsearch.cluster.InternalClusterInfoService.updateIndicesStats(InternalClusterInfoService.java:303)
+	at org.elasticsearch.cluster.InternalClusterInfoService.refresh(InternalClusterInfoService.java:354)
+	at org.elasticsearch.cluster.InternalClusterInfoService.maybeRefresh(InternalClusterInfoService.java:310)
+	at org.elasticsearch.cluster.InternalClusterInfoService.access$600(InternalClusterInfoService.java:69)
+	at org.elasticsearch.cluster.InternalClusterInfoService$SubmitReschedulingClusterInfoUpdatedJob$1.run(InternalClusterInfoService.java:255)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: TransportException[TransportService is closed stopped can't send request]
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:320)
+	... 15 more
+[2018-05-12 18:23:16,638][INFO ][node                     ] [Wendell Vaughn] stopped
+[2018-05-12 18:23:16,638][INFO ][node                     ] [Wendell Vaughn] closing ...
+[2018-05-12 18:23:16,641][INFO ][node                     ] [Wendell Vaughn] closed

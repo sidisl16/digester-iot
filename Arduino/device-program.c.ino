@@ -83,6 +83,13 @@ float getTemp1Reading()
  return (tempInC * 1.8 + 32);
 } 
 
+float getTemp2Reading() 
+{ 
+ sensors.requestTemperatures(); // Send the command to get temperature readings 
+ float tempInC = sensors.getTempCByIndex(1); 
+ return (tempInC * 1.8 + 32);
+} 
+
 
 String formJSONMessage(float temp1, float temp2, float ph, float flowRate, float moisture, long timeMillis) {
 
@@ -117,11 +124,11 @@ String formJSONMessage(float temp1, float temp2, float ph, float flowRate, float
 void sendReadings(){
   
   if(connected == 1) {
-    float temp1 = getTemp1Reading();//95.0;
-    float temp2 = 95.0;
-    float ph =  getPhReading();//7.0;
-    float flowRate = 10;
-    float moisture = getMoistureReading();//600;
+    float temp1 = getTemp1Reading();//95.0;//
+    float temp2 = getTemp2Reading();// 95.0;//95.0;
+    float ph =  getPhReading();//7.0;//
+    float flowRate = 0;
+    float moisture = 600;//getMoistureReading();
     long timeMillis = millis();
     String message = formJSONMessage(temp1,temp2,ph,flowRate,moisture,timeMillis);
 

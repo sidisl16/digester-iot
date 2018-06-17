@@ -1,0 +1,18 @@
+[2018-04-29 19:32:34,982][INFO ][node                     ] [Jennifer Walters] version[2.4.0], pid[7232], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-04-29 19:32:34,984][INFO ][node                     ] [Jennifer Walters] initializing ...
+[2018-04-29 19:32:35,703][INFO ][plugins                  ] [Jennifer Walters] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-04-29 19:32:35,777][INFO ][env                      ] [Jennifer Walters] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412.1gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-04-29 19:32:35,778][INFO ][env                      ] [Jennifer Walters] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-04-29 19:32:38,120][INFO ][node                     ] [Jennifer Walters] initialized
+[2018-04-29 19:32:38,120][INFO ][node                     ] [Jennifer Walters] starting ...
+[2018-04-29 19:32:38,454][INFO ][transport                ] [Jennifer Walters] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-04-29 19:32:38,457][INFO ][discovery                ] [Jennifer Walters] elastic-cluster/OBouWO4cRVuDIsTpua4kJA
+[2018-04-29 19:32:42,513][INFO ][cluster.service          ] [Jennifer Walters] new_master {Jennifer Walters}{OBouWO4cRVuDIsTpua4kJA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-04-29 19:32:42,679][INFO ][gateway                  ] [Jennifer Walters] recovered [1] indices into cluster_state
+[2018-04-29 19:32:42,737][INFO ][http                     ] [Jennifer Walters] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-04-29 19:32:42,737][INFO ][node                     ] [Jennifer Walters] started
+[2018-04-29 19:32:43,746][INFO ][cluster.routing.allocation] [Jennifer Walters] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][0]] ...]).
+[2018-04-29 22:03:18,800][INFO ][node                     ] [Jennifer Walters] stopping ...
+[2018-04-29 22:03:19,666][INFO ][node                     ] [Jennifer Walters] stopped
+[2018-04-29 22:03:19,666][INFO ][node                     ] [Jennifer Walters] closing ...
+[2018-04-29 22:03:19,666][INFO ][node                     ] [Jennifer Walters] closed

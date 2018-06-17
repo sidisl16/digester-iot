@@ -1,0 +1,18 @@
+[2018-04-30 12:38:41,948][INFO ][node                     ] [Elf With A Gun] version[2.4.0], pid[10136], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-04-30 12:38:41,950][INFO ][node                     ] [Elf With A Gun] initializing ...
+[2018-04-30 12:38:42,765][INFO ][plugins                  ] [Elf With A Gun] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-04-30 12:38:42,816][INFO ][env                      ] [Elf With A Gun] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412.1gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-04-30 12:38:42,817][INFO ][env                      ] [Elf With A Gun] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-04-30 12:38:44,684][INFO ][node                     ] [Elf With A Gun] initialized
+[2018-04-30 12:38:44,684][INFO ][node                     ] [Elf With A Gun] starting ...
+[2018-04-30 12:38:44,914][INFO ][transport                ] [Elf With A Gun] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-04-30 12:38:44,917][INFO ][discovery                ] [Elf With A Gun] elastic-cluster/jlzjUHzzQdi6V5pGXW_O6w
+[2018-04-30 12:38:48,975][INFO ][cluster.service          ] [Elf With A Gun] new_master {Elf With A Gun}{jlzjUHzzQdi6V5pGXW_O6w}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-04-30 12:38:49,172][INFO ][gateway                  ] [Elf With A Gun] recovered [1] indices into cluster_state
+[2018-04-30 12:38:49,183][INFO ][http                     ] [Elf With A Gun] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-04-30 12:38:49,183][INFO ][node                     ] [Elf With A Gun] started
+[2018-04-30 12:38:50,334][INFO ][cluster.routing.allocation] [Elf With A Gun] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][2]] ...]).
+[2018-04-30 14:48:31,632][INFO ][node                     ] [Elf With A Gun] stopping ...
+[2018-04-30 14:48:31,742][INFO ][node                     ] [Elf With A Gun] stopped
+[2018-04-30 14:48:31,742][INFO ][node                     ] [Elf With A Gun] closing ...
+[2018-04-30 14:48:31,757][INFO ][node                     ] [Elf With A Gun] closed

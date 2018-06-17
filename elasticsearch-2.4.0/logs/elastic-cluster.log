@@ -1,411 +1,559 @@
-[2018-04-28 19:51:35,685][INFO ][node                     ] [Basil Sandhurst] version[2.4.0], pid[5080], build[ce9f0c7/2016-08-29T09:14:17Z]
-[2018-04-28 19:51:35,688][INFO ][node                     ] [Basil Sandhurst] initializing ...
-[2018-04-28 19:51:35,949][INFO ][plugins                  ] [Basil Sandhurst] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
-[2018-04-28 19:51:35,962][INFO ][env                      ] [Basil Sandhurst] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
-[2018-04-28 19:51:35,964][INFO ][env                      ] [Basil Sandhurst] heap size [910.5mb], compressed ordinary object pointers [true]
-[2018-04-28 19:51:36,879][INFO ][node                     ] [Basil Sandhurst] initialized
-[2018-04-28 19:51:36,879][INFO ][node                     ] [Basil Sandhurst] starting ...
-[2018-04-28 19:51:37,157][INFO ][transport                ] [Basil Sandhurst] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
-[2018-04-28 19:51:37,161][INFO ][discovery                ] [Basil Sandhurst] elastic-cluster/p9SrqTEJSACXljzcsd0Cmw
-[2018-04-28 19:51:41,209][INFO ][cluster.service          ] [Basil Sandhurst] new_master {Basil Sandhurst}{p9SrqTEJSACXljzcsd0Cmw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
-[2018-04-28 19:51:41,307][INFO ][gateway                  ] [Basil Sandhurst] recovered [0] indices into cluster_state
-[2018-04-28 19:51:41,487][INFO ][http                     ] [Basil Sandhurst] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
-[2018-04-28 19:51:41,488][INFO ][node                     ] [Basil Sandhurst] started
-[2018-04-28 19:52:14,660][INFO ][cluster.metadata         ] [Basil Sandhurst] [sensors] creating index, cause [api], templates [], shards [5]/[1], mappings []
-[2018-04-28 19:52:14,820][INFO ][cluster.metadata         ] [Basil Sandhurst] [sensors] create_mapping [readings]
-[2018-04-28 19:52:15,273][INFO ][cluster.routing.allocation] [Basil Sandhurst] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][4]] ...]).
-[2018-04-28 19:52:36,710][INFO ][cluster.metadata         ] [Basil Sandhurst] [sensors] update_mapping [readings]
-[2018-04-28 20:00:16,444][INFO ][node                     ] [Basil Sandhurst] stopping ...
-[2018-04-28 20:00:17,052][INFO ][node                     ] [Basil Sandhurst] stopped
-[2018-04-28 20:00:17,054][INFO ][node                     ] [Basil Sandhurst] closing ...
-[2018-04-28 20:00:17,058][INFO ][node                     ] [Basil Sandhurst] closed
-[2018-04-28 20:02:33,166][INFO ][node                     ] [Destroyer] version[2.4.0], pid[6076], build[ce9f0c7/2016-08-29T09:14:17Z]
-[2018-04-28 20:02:33,166][INFO ][node                     ] [Destroyer] initializing ...
-[2018-04-28 20:02:33,444][INFO ][plugins                  ] [Destroyer] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
-[2018-04-28 20:02:33,464][INFO ][env                      ] [Destroyer] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412.1gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
-[2018-04-28 20:02:33,466][INFO ][env                      ] [Destroyer] heap size [910.5mb], compressed ordinary object pointers [true]
-[2018-04-28 20:02:34,359][INFO ][node                     ] [Destroyer] initialized
-[2018-04-28 20:02:34,359][INFO ][node                     ] [Destroyer] starting ...
-[2018-04-28 20:02:34,628][INFO ][transport                ] [Destroyer] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
-[2018-04-28 20:02:34,628][INFO ][discovery                ] [Destroyer] elastic-cluster/po8OKU6nTQeSxg3xA9YmFQ
-[2018-04-28 20:02:38,697][INFO ][cluster.service          ] [Destroyer] new_master {Destroyer}{po8OKU6nTQeSxg3xA9YmFQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
-[2018-04-28 20:02:38,781][INFO ][gateway                  ] [Destroyer] recovered [1] indices into cluster_state
-[2018-04-28 20:02:38,997][INFO ][http                     ] [Destroyer] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
-[2018-04-28 20:02:38,997][INFO ][node                     ] [Destroyer] started
-[2018-04-28 20:02:39,235][INFO ][cluster.routing.allocation] [Destroyer] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][4]] ...]).
-[2018-04-28 20:44:29,435][WARN ][transport.netty          ] [Destroyer] exception caught on transport layer [[id: 0x966f5902, /127.0.0.1:58716 => /127.0.0.1:9300]], closing connection
-java.lang.IllegalStateException: Received message from unsupported version: [5.0.0] minimal compatible version is: [2.0.0]
-	at org.elasticsearch.transport.netty.MessageChannelHandler.messageReceived(MessageChannelHandler.java:110)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:462)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.callDecode(FrameDecoder.java:443)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.messageReceived(FrameDecoder.java:303)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:748)
-[2018-04-28 20:44:29,435][WARN ][transport.netty          ] [Destroyer] exception caught on transport layer [[id: 0x049d78bd, /0:0:0:0:0:0:0:1:58713 => /0:0:0:0:0:0:0:1:9300]], closing connection
-java.lang.IllegalStateException: Received message from unsupported version: [5.0.0] minimal compatible version is: [2.0.0]
-	at org.elasticsearch.transport.netty.MessageChannelHandler.messageReceived(MessageChannelHandler.java:110)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:462)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.callDecode(FrameDecoder.java:443)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.messageReceived(FrameDecoder.java:303)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:748)
-[2018-04-28 20:44:30,403][WARN ][transport.netty          ] [Destroyer] exception caught on transport layer [[id: 0xe4968895, /0:0:0:0:0:0:0:1:58719 => /0:0:0:0:0:0:0:1:9300]], closing connection
-java.lang.IllegalStateException: Received message from unsupported version: [5.0.0] minimal compatible version is: [2.0.0]
-	at org.elasticsearch.transport.netty.MessageChannelHandler.messageReceived(MessageChannelHandler.java:110)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:462)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.callDecode(FrameDecoder.java:443)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.messageReceived(FrameDecoder.java:303)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:748)
-[2018-04-28 20:44:30,432][WARN ][transport.netty          ] [Destroyer] exception caught on transport layer [[id: 0x416c74a3, /127.0.0.1:58721 => /127.0.0.1:9300]], closing connection
-java.lang.IllegalStateException: Received message from unsupported version: [5.0.0] minimal compatible version is: [2.0.0]
-	at org.elasticsearch.transport.netty.MessageChannelHandler.messageReceived(MessageChannelHandler.java:110)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:462)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.callDecode(FrameDecoder.java:443)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.messageReceived(FrameDecoder.java:303)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:748)
-[2018-04-28 20:44:31,401][WARN ][transport.netty          ] [Destroyer] exception caught on transport layer [[id: 0x9078aeb4, /0:0:0:0:0:0:0:1:58727 => /0:0:0:0:0:0:0:1:9300]], closing connection
-java.lang.IllegalStateException: Received message from unsupported version: [5.0.0] minimal compatible version is: [2.0.0]
-	at org.elasticsearch.transport.netty.MessageChannelHandler.messageReceived(MessageChannelHandler.java:110)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:462)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.callDecode(FrameDecoder.java:443)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.messageReceived(FrameDecoder.java:303)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:748)
-[2018-04-28 20:44:31,433][WARN ][transport.netty          ] [Destroyer] exception caught on transport layer [[id: 0xdc1e948c, /127.0.0.1:58729 => /127.0.0.1:9300]], closing connection
-java.lang.IllegalStateException: Received message from unsupported version: [5.0.0] minimal compatible version is: [2.0.0]
-	at org.elasticsearch.transport.netty.MessageChannelHandler.messageReceived(MessageChannelHandler.java:110)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:462)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.callDecode(FrameDecoder.java:443)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.messageReceived(FrameDecoder.java:303)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:748)
-[2018-04-28 20:45:49,907][WARN ][transport.netty          ] [Destroyer] exception caught on transport layer [[id: 0x24dd4db3, /127.0.0.1:59032 => /127.0.0.1:9300]], closing connection
-java.lang.IllegalStateException: Received message from unsupported version: [5.0.0] minimal compatible version is: [2.0.0]
-	at org.elasticsearch.transport.netty.MessageChannelHandler.messageReceived(MessageChannelHandler.java:110)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:462)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.callDecode(FrameDecoder.java:443)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.messageReceived(FrameDecoder.java:303)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:748)
-[2018-04-28 20:45:49,907][WARN ][transport.netty          ] [Destroyer] exception caught on transport layer [[id: 0xbc585556, /0:0:0:0:0:0:0:1:59036 => /0:0:0:0:0:0:0:1:9300]], closing connection
-java.lang.IllegalStateException: Received message from unsupported version: [5.0.0] minimal compatible version is: [2.0.0]
-	at org.elasticsearch.transport.netty.MessageChannelHandler.messageReceived(MessageChannelHandler.java:110)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:462)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.callDecode(FrameDecoder.java:443)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.messageReceived(FrameDecoder.java:303)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:748)
-[2018-04-28 20:45:50,877][WARN ][transport.netty          ] [Destroyer] exception caught on transport layer [[id: 0x89dcc200, /127.0.0.1:59038 => /127.0.0.1:9300]], closing connection
-java.lang.IllegalStateException: Received message from unsupported version: [5.0.0] minimal compatible version is: [2.0.0]
-	at org.elasticsearch.transport.netty.MessageChannelHandler.messageReceived(MessageChannelHandler.java:110)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:462)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.callDecode(FrameDecoder.java:443)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.messageReceived(FrameDecoder.java:303)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:748)
-[2018-04-28 20:45:50,887][WARN ][transport.netty          ] [Destroyer] exception caught on transport layer [[id: 0x260a54e1, /0:0:0:0:0:0:0:1:59041 => /0:0:0:0:0:0:0:1:9300]], closing connection
-java.lang.IllegalStateException: Received message from unsupported version: [5.0.0] minimal compatible version is: [2.0.0]
-	at org.elasticsearch.transport.netty.MessageChannelHandler.messageReceived(MessageChannelHandler.java:110)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:462)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.callDecode(FrameDecoder.java:443)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.messageReceived(FrameDecoder.java:303)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:748)
-[2018-04-28 20:45:51,877][WARN ][transport.netty          ] [Destroyer] exception caught on transport layer [[id: 0x88c5e27f, /127.0.0.1:59046 => /127.0.0.1:9300]], closing connection
-java.lang.IllegalStateException: Received message from unsupported version: [5.0.0] minimal compatible version is: [2.0.0]
-	at org.elasticsearch.transport.netty.MessageChannelHandler.messageReceived(MessageChannelHandler.java:110)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:462)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.callDecode(FrameDecoder.java:443)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.messageReceived(FrameDecoder.java:303)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:748)
-[2018-04-28 20:45:51,891][WARN ][transport.netty          ] [Destroyer] exception caught on transport layer [[id: 0x51e86ca7, /0:0:0:0:0:0:0:1:59048 => /0:0:0:0:0:0:0:1:9300]], closing connection
-java.lang.IllegalStateException: Received message from unsupported version: [5.0.0] minimal compatible version is: [2.0.0]
-	at org.elasticsearch.transport.netty.MessageChannelHandler.messageReceived(MessageChannelHandler.java:110)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:462)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.callDecode(FrameDecoder.java:443)
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.messageReceived(FrameDecoder.java:303)
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
-	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:748)
-[2018-04-28 20:46:40,633][INFO ][node                     ] [Destroyer] stopping ...
-[2018-04-28 20:46:40,735][INFO ][node                     ] [Destroyer] stopped
-[2018-04-28 20:46:40,736][INFO ][node                     ] [Destroyer] closing ...
-[2018-04-28 20:46:40,746][INFO ][node                     ] [Destroyer] closed
-[2018-04-28 20:56:03,646][INFO ][node                     ] [Volpan] version[2.4.0], pid[10092], build[ce9f0c7/2016-08-29T09:14:17Z]
-[2018-04-28 20:56:03,648][INFO ][node                     ] [Volpan] initializing ...
-[2018-04-28 20:56:03,931][INFO ][plugins                  ] [Volpan] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
-[2018-04-28 20:56:03,943][INFO ][env                      ] [Volpan] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412.1gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
-[2018-04-28 20:56:03,945][INFO ][env                      ] [Volpan] heap size [910.5mb], compressed ordinary object pointers [true]
-[2018-04-28 20:56:04,896][INFO ][node                     ] [Volpan] initialized
-[2018-04-28 20:56:04,896][INFO ][node                     ] [Volpan] starting ...
-[2018-04-28 20:56:05,174][INFO ][transport                ] [Volpan] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
-[2018-04-28 20:56:05,178][INFO ][discovery                ] [Volpan] elastic-cluster/VeXHwxZnTByz_ts6al_PDQ
-[2018-04-28 20:56:09,219][INFO ][cluster.service          ] [Volpan] new_master {Volpan}{VeXHwxZnTByz_ts6al_PDQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
-[2018-04-28 20:56:09,326][INFO ][gateway                  ] [Volpan] recovered [1] indices into cluster_state
-[2018-04-28 20:56:09,563][INFO ][http                     ] [Volpan] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
-[2018-04-28 20:56:09,565][INFO ][node                     ] [Volpan] started
-[2018-04-28 20:56:09,992][INFO ][cluster.routing.allocation] [Volpan] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][4]] ...]).
-[2018-04-28 20:56:47,589][INFO ][cluster.metadata         ] [Volpan] [sensors] creating index, cause [api], templates [], shards [5]/[1], mappings []
-[2018-04-28 20:56:47,673][INFO ][cluster.metadata         ] [Volpan] [sensors] create_mapping [readings]
-[2018-04-28 20:56:47,985][INFO ][cluster.routing.allocation] [Volpan] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][4], [sensors][4]] ...]).
-[2018-04-28 20:56:59,305][INFO ][cluster.metadata         ] [Volpan] [sensors] update_mapping [readings]
-[2018-04-28 21:07:40,290][INFO ][cluster.metadata         ] [Volpan] [sensors] creating index, cause [api], templates [], shards [5]/[1], mappings []
-[2018-04-28 21:07:40,724][INFO ][cluster.routing.allocation] [Volpan] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][4]] ...]).
-[2018-04-28 21:07:49,690][INFO ][cluster.metadata         ] [Volpan] [sensors] create_mapping [readings]
-[2018-04-28 21:07:56,677][INFO ][cluster.metadata         ] [Volpan] [sensors] update_mapping [readings]
-[2018-04-28 21:08:32,086][INFO ][cluster.metadata         ] [Volpan] [sensors] creating index, cause [api], templates [], shards [5]/[1], mappings []
-[2018-04-28 21:08:32,498][INFO ][cluster.routing.allocation] [Volpan] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][4], [sensors][4]] ...]).
-[2018-04-28 21:12:17,593][INFO ][cluster.metadata         ] [Volpan] [sensors] creating index, cause [api], templates [], shards [5]/[1], mappings []
-[2018-04-28 21:12:17,699][INFO ][cluster.metadata         ] [Volpan] [sensors] create_mapping [readings]
-[2018-04-28 21:12:17,964][INFO ][cluster.routing.allocation] [Volpan] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][4]] ...]).
-[2018-04-28 21:12:46,090][INFO ][cluster.metadata         ] [Volpan] [sensors] update_mapping [readings]
-[2018-04-28 21:19:42,748][INFO ][cluster.metadata         ] [Volpan] [sensors] creating index, cause [api], templates [], shards [5]/[1], mappings []
-[2018-04-28 21:19:42,812][INFO ][cluster.metadata         ] [Volpan] [sensors] create_mapping [readings]
-[2018-04-28 21:19:43,196][INFO ][cluster.routing.allocation] [Volpan] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][4]] ...]).
-[2018-04-28 21:20:04,117][INFO ][cluster.metadata         ] [Volpan] [sensors] update_mapping [readings]
-[2018-04-28 21:32:46,818][INFO ][node                     ] [Volpan] stopping ...
-[2018-04-28 21:32:47,416][INFO ][node                     ] [Volpan] stopped
-[2018-04-28 21:32:47,419][INFO ][node                     ] [Volpan] closing ...
-[2018-04-28 21:32:47,432][INFO ][node                     ] [Volpan] closed
+[2018-06-17 12:46:08,584][INFO ][node                     ] [Lupa] version[2.4.0], pid[9244], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 12:46:08,615][INFO ][node                     ] [Lupa] initializing ...
+[2018-06-17 12:46:08,869][INFO ][plugins                  ] [Lupa] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 12:46:08,885][INFO ][env                      ] [Lupa] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412.1gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 12:46:08,885][INFO ][env                      ] [Lupa] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 12:46:09,881][INFO ][node                     ] [Lupa] initialized
+[2018-06-17 12:46:09,881][INFO ][node                     ] [Lupa] starting ...
+[2018-06-17 12:46:10,081][INFO ][transport                ] [Lupa] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 12:46:10,081][INFO ][discovery                ] [Lupa] elastic-cluster/eACfSI-ZSZ-nUxMmZ-NFxA
+[2018-06-17 12:46:14,205][INFO ][cluster.service          ] [Lupa] new_master {Lupa}{eACfSI-ZSZ-nUxMmZ-NFxA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 12:46:14,406][INFO ][http                     ] [Lupa] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 12:46:14,406][INFO ][node                     ] [Lupa] started
+[2018-06-17 12:46:14,875][INFO ][gateway                  ] [Lupa] recovered [1] indices into cluster_state
+[2018-06-17 12:46:16,223][INFO ][cluster.routing.allocation] [Lupa] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][1]] ...]).
+[2018-06-17 12:50:48,272][INFO ][bootstrap                ] running graceful exit on windows
+[2018-06-17 12:50:48,272][INFO ][node                     ] [Lupa] stopping ...
+[2018-06-17 12:50:48,438][INFO ][node                     ] [Lupa] stopped
+[2018-06-17 12:50:48,438][INFO ][node                     ] [Lupa] closing ...
+[2018-06-17 12:50:48,454][INFO ][node                     ] [Lupa] closed
+[2018-06-17 12:50:56,615][INFO ][node                     ] [Impossible Man] version[2.4.0], pid[6368], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 12:50:56,615][INFO ][node                     ] [Impossible Man] initializing ...
+[2018-06-17 12:50:56,900][INFO ][plugins                  ] [Impossible Man] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 12:50:56,900][INFO ][env                      ] [Impossible Man] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412.1gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 12:50:56,900][INFO ][env                      ] [Impossible Man] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 12:50:57,897][INFO ][node                     ] [Impossible Man] initialized
+[2018-06-17 12:50:57,897][INFO ][node                     ] [Impossible Man] starting ...
+[2018-06-17 12:50:58,097][INFO ][transport                ] [Impossible Man] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 12:50:58,097][INFO ][discovery                ] [Impossible Man] elastic-cluster/NmRFdTRCQGi_Xv1jhrR6Vg
+[2018-06-17 12:51:02,153][INFO ][cluster.service          ] [Impossible Man] new_master {Impossible Man}{NmRFdTRCQGi_Xv1jhrR6Vg}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 12:51:02,322][INFO ][http                     ] [Impossible Man] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 12:51:02,322][INFO ][node                     ] [Impossible Man] started
+[2018-06-17 12:51:02,343][INFO ][gateway                  ] [Impossible Man] recovered [1] indices into cluster_state
+[2018-06-17 12:51:03,054][INFO ][cluster.routing.allocation] [Impossible Man] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][2], [sensors][4]] ...]).
+[2018-06-17 12:51:27,173][INFO ][bootstrap                ] running graceful exit on windows
+[2018-06-17 12:51:27,173][INFO ][node                     ] [Impossible Man] stopping ...
+[2018-06-17 12:51:27,204][INFO ][node                     ] [Impossible Man] stopped
+[2018-06-17 12:51:27,204][INFO ][node                     ] [Impossible Man] closing ...
+[2018-06-17 12:51:27,204][INFO ][node                     ] [Impossible Man] closed
+[2018-06-17 13:08:30,032][INFO ][node                     ] [Sludge] version[2.4.0], pid[6852], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 13:08:30,032][INFO ][node                     ] [Sludge] initializing ...
+[2018-06-17 13:08:30,286][INFO ][plugins                  ] [Sludge] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 13:08:30,302][INFO ][env                      ] [Sludge] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412.1gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 13:08:30,302][INFO ][env                      ] [Sludge] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 13:08:31,321][INFO ][node                     ] [Sludge] initialized
+[2018-06-17 13:08:31,321][INFO ][node                     ] [Sludge] starting ...
+[2018-06-17 13:08:31,506][INFO ][transport                ] [Sludge] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 13:08:31,521][INFO ][discovery                ] [Sludge] elastic-cluster/SvptwlUNTPqT5yHMUrA5Mg
+[2018-06-17 13:08:35,608][INFO ][cluster.service          ] [Sludge] new_master {Sludge}{SvptwlUNTPqT5yHMUrA5Mg}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 13:08:35,723][INFO ][gateway                  ] [Sludge] recovered [1] indices into cluster_state
+[2018-06-17 13:08:35,777][INFO ][http                     ] [Sludge] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 13:08:35,777][INFO ][node                     ] [Sludge] started
+[2018-06-17 13:08:36,308][INFO ][cluster.routing.allocation] [Sludge] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][4]] ...]).
+[2018-06-17 13:08:50,349][INFO ][node                     ] [Sludge] stopping ...
+[2018-06-17 13:08:50,429][INFO ][node                     ] [Sludge] stopped
+[2018-06-17 13:08:50,429][INFO ][node                     ] [Sludge] closing ...
+[2018-06-17 13:08:50,445][INFO ][node                     ] [Sludge] closed
+[2018-06-17 13:10:05,362][INFO ][node                     ] [Thunderclap] version[2.4.0], pid[200], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 13:10:05,362][INFO ][node                     ] [Thunderclap] initializing ...
+[2018-06-17 13:10:05,631][INFO ][plugins                  ] [Thunderclap] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 13:10:05,639][INFO ][env                      ] [Thunderclap] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412.1gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 13:10:05,639][INFO ][env                      ] [Thunderclap] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 13:10:06,639][INFO ][node                     ] [Thunderclap] initialized
+[2018-06-17 13:10:06,639][INFO ][node                     ] [Thunderclap] starting ...
+[2018-06-17 13:10:06,821][INFO ][transport                ] [Thunderclap] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 13:10:06,821][INFO ][discovery                ] [Thunderclap] elastic-cluster/EKbaJB8ZQl-2K3WBB_SUQA
+[2018-06-17 13:10:10,922][INFO ][cluster.service          ] [Thunderclap] new_master {Thunderclap}{EKbaJB8ZQl-2K3WBB_SUQA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 13:10:11,021][INFO ][gateway                  ] [Thunderclap] recovered [1] indices into cluster_state
+[2018-06-17 13:10:11,108][INFO ][http                     ] [Thunderclap] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 13:10:11,108][INFO ][node                     ] [Thunderclap] started
+[2018-06-17 13:10:11,675][INFO ][cluster.routing.allocation] [Thunderclap] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][3]] ...]).
+[2018-06-17 13:10:21,226][INFO ][node                     ] [Thunderclap] stopping ...
+[2018-06-17 13:10:21,310][INFO ][node                     ] [Thunderclap] stopped
+[2018-06-17 13:10:21,310][INFO ][node                     ] [Thunderclap] closing ...
+[2018-06-17 13:10:21,310][INFO ][node                     ] [Thunderclap] closed
+[2018-06-17 13:25:51,636][INFO ][node                     ] [Valkin] version[2.4.0], pid[1428], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 13:25:51,650][INFO ][node                     ] [Valkin] initializing ...
+[2018-06-17 13:25:51,922][INFO ][plugins                  ] [Valkin] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 13:25:51,934][INFO ][env                      ] [Valkin] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412.1gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 13:25:51,934][INFO ][env                      ] [Valkin] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 13:25:52,974][INFO ][node                     ] [Valkin] initialized
+[2018-06-17 13:25:52,974][INFO ][node                     ] [Valkin] starting ...
+[2018-06-17 13:25:53,174][INFO ][transport                ] [Valkin] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 13:25:53,177][INFO ][discovery                ] [Valkin] elastic-cluster/lyyXDo7OQtem5dihVZLyjw
+[2018-06-17 13:25:57,216][INFO ][cluster.service          ] [Valkin] new_master {Valkin}{lyyXDo7OQtem5dihVZLyjw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 13:25:57,275][INFO ][gateway                  ] [Valkin] recovered [1] indices into cluster_state
+[2018-06-17 13:25:57,406][INFO ][http                     ] [Valkin] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 13:25:57,406][INFO ][node                     ] [Valkin] started
+[2018-06-17 13:25:58,119][INFO ][cluster.routing.allocation] [Valkin] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][0]] ...]).
+[2018-06-17 13:26:02,820][INFO ][node                     ] [Valkin] stopping ...
+[2018-06-17 13:26:02,866][INFO ][node                     ] [Valkin] stopped
+[2018-06-17 13:26:02,866][INFO ][node                     ] [Valkin] closing ...
+[2018-06-17 13:26:02,866][INFO ][node                     ] [Valkin] closed
+[2018-06-17 14:05:42,577][INFO ][node                     ] [Xavin] version[2.4.0], pid[6812], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 14:05:42,577][INFO ][node                     ] [Xavin] initializing ...
+[2018-06-17 14:05:42,945][INFO ][plugins                  ] [Xavin] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 14:05:42,957][INFO ][env                      ] [Xavin] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 14:05:42,958][INFO ][env                      ] [Xavin] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 14:05:44,276][INFO ][node                     ] [Xavin] initialized
+[2018-06-17 14:05:44,276][INFO ][node                     ] [Xavin] starting ...
+[2018-06-17 14:05:44,498][INFO ][transport                ] [Xavin] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 14:05:44,502][INFO ][discovery                ] [Xavin] elastic-cluster/Ws5dtx6-Q8qhYauEAYSb1g
+[2018-06-17 14:05:45,024][DEBUG][action.admin.indices.exists.indices] [Xavin] no known master node, scheduling a retry
+[2018-06-17 14:05:48,528][INFO ][cluster.service          ] [Xavin] new_master {Xavin}{Ws5dtx6-Q8qhYauEAYSb1g}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 14:05:48,692][INFO ][http                     ] [Xavin] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 14:05:48,692][INFO ][node                     ] [Xavin] started
+[2018-06-17 14:05:48,709][INFO ][gateway                  ] [Xavin] recovered [1] indices into cluster_state
+[2018-06-17 14:05:49,711][INFO ][cluster.routing.allocation] [Xavin] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][4]] ...]).
+[2018-06-17 14:06:06,231][INFO ][node                     ] [Xavin] stopping ...
+[2018-06-17 14:06:06,311][INFO ][node                     ] [Xavin] stopped
+[2018-06-17 14:06:06,312][INFO ][node                     ] [Xavin] closing ...
+[2018-06-17 14:06:06,315][INFO ][node                     ] [Xavin] closed
+[2018-06-17 14:09:22,923][INFO ][node                     ] [Silver Surfer] version[2.4.0], pid[10984], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 14:09:22,923][INFO ][node                     ] [Silver Surfer] initializing ...
+[2018-06-17 14:09:23,179][INFO ][plugins                  ] [Silver Surfer] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 14:09:23,190][INFO ][env                      ] [Silver Surfer] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 14:09:23,191][INFO ][env                      ] [Silver Surfer] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 14:09:24,173][INFO ][node                     ] [Silver Surfer] initialized
+[2018-06-17 14:09:24,173][INFO ][node                     ] [Silver Surfer] starting ...
+[2018-06-17 14:09:24,375][INFO ][transport                ] [Silver Surfer] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 14:09:24,378][INFO ][discovery                ] [Silver Surfer] elastic-cluster/B21wX-tnTLKz29Z5fxHKZQ
+[2018-06-17 14:09:28,428][INFO ][cluster.service          ] [Silver Surfer] new_master {Silver Surfer}{B21wX-tnTLKz29Z5fxHKZQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 14:09:28,616][INFO ][http                     ] [Silver Surfer] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 14:09:28,616][INFO ][node                     ] [Silver Surfer] started
+[2018-06-17 14:09:28,623][INFO ][gateway                  ] [Silver Surfer] recovered [1] indices into cluster_state
+[2018-06-17 14:09:29,459][INFO ][cluster.routing.allocation] [Silver Surfer] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][2]] ...]).
+[2018-06-17 14:09:52,255][INFO ][node                     ] [Silver Surfer] stopping ...
+[2018-06-17 14:09:52,357][INFO ][node                     ] [Silver Surfer] stopped
+[2018-06-17 14:09:52,357][INFO ][node                     ] [Silver Surfer] closing ...
+[2018-06-17 14:09:52,361][INFO ][node                     ] [Silver Surfer] closed
+[2018-06-17 14:11:20,261][INFO ][node                     ] [Zodiak] version[2.4.0], pid[10648], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 14:11:20,261][INFO ][node                     ] [Zodiak] initializing ...
+[2018-06-17 14:11:20,632][INFO ][plugins                  ] [Zodiak] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 14:11:20,648][INFO ][env                      ] [Zodiak] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 14:11:20,648][INFO ][env                      ] [Zodiak] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 14:11:22,175][INFO ][node                     ] [Zodiak] initialized
+[2018-06-17 14:11:22,175][INFO ][node                     ] [Zodiak] starting ...
+[2018-06-17 14:11:22,391][INFO ][transport                ] [Zodiak] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 14:11:22,394][INFO ][discovery                ] [Zodiak] elastic-cluster/L7hgX331S0aZhWqZGPpYcA
+[2018-06-17 14:11:23,430][DEBUG][action.admin.indices.exists.indices] [Zodiak] no known master node, scheduling a retry
+[2018-06-17 14:11:26,445][INFO ][cluster.service          ] [Zodiak] new_master {Zodiak}{L7hgX331S0aZhWqZGPpYcA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 14:11:26,633][INFO ][http                     ] [Zodiak] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 14:11:26,634][INFO ][node                     ] [Zodiak] started
+[2018-06-17 14:11:26,701][INFO ][gateway                  ] [Zodiak] recovered [1] indices into cluster_state
+[2018-06-17 14:11:27,397][INFO ][cluster.routing.allocation] [Zodiak] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][0]] ...]).
+[2018-06-17 14:11:37,849][INFO ][node                     ] [Zodiak] stopping ...
+[2018-06-17 14:11:37,933][INFO ][node                     ] [Zodiak] stopped
+[2018-06-17 14:11:37,933][INFO ][node                     ] [Zodiak] closing ...
+[2018-06-17 14:11:37,937][INFO ][node                     ] [Zodiak] closed
+[2018-06-17 14:14:00,449][INFO ][node                     ] [Hood] version[2.4.0], pid[11088], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 14:14:00,449][INFO ][node                     ] [Hood] initializing ...
+[2018-06-17 14:14:00,888][INFO ][plugins                  ] [Hood] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 14:14:00,907][INFO ][env                      ] [Hood] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 14:14:00,918][INFO ][env                      ] [Hood] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 14:14:02,489][INFO ][node                     ] [Hood] initialized
+[2018-06-17 14:14:02,490][INFO ][node                     ] [Hood] starting ...
+[2018-06-17 14:14:02,708][INFO ][transport                ] [Hood] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 14:14:02,711][INFO ][discovery                ] [Hood] elastic-cluster/x7M9oFzmQJO6b-PsIzF-Sw
+[2018-06-17 14:14:03,702][DEBUG][action.admin.indices.exists.indices] [Hood] no known master node, scheduling a retry
+[2018-06-17 14:14:06,744][INFO ][cluster.service          ] [Hood] new_master {Hood}{x7M9oFzmQJO6b-PsIzF-Sw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 14:14:06,922][INFO ][http                     ] [Hood] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 14:14:06,922][INFO ][node                     ] [Hood] started
+[2018-06-17 14:14:06,945][INFO ][gateway                  ] [Hood] recovered [1] indices into cluster_state
+[2018-06-17 14:14:07,673][INFO ][cluster.routing.allocation] [Hood] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][1]] ...]).
+[2018-06-17 14:14:35,419][INFO ][node                     ] [Hood] stopping ...
+[2018-06-17 14:14:35,532][INFO ][node                     ] [Hood] stopped
+[2018-06-17 14:14:35,532][INFO ][node                     ] [Hood] closing ...
+[2018-06-17 14:14:35,535][INFO ][node                     ] [Hood] closed
+[2018-06-17 14:15:41,061][INFO ][node                     ] [Black Queen] version[2.4.0], pid[10892], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 14:15:41,062][INFO ][node                     ] [Black Queen] initializing ...
+[2018-06-17 14:15:41,505][INFO ][plugins                  ] [Black Queen] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 14:15:41,522][INFO ][env                      ] [Black Queen] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 14:15:41,522][INFO ][env                      ] [Black Queen] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 14:15:42,924][INFO ][node                     ] [Black Queen] initialized
+[2018-06-17 14:15:42,924][INFO ][node                     ] [Black Queen] starting ...
+[2018-06-17 14:15:43,153][INFO ][transport                ] [Black Queen] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 14:15:43,157][INFO ][discovery                ] [Black Queen] elastic-cluster/s7JvHs-GRHqiIyOuE_KYlw
+[2018-06-17 14:15:44,133][DEBUG][action.admin.indices.exists.indices] [Black Queen] no known master node, scheduling a retry
+[2018-06-17 14:15:47,188][INFO ][cluster.service          ] [Black Queen] new_master {Black Queen}{s7JvHs-GRHqiIyOuE_KYlw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 14:15:47,365][INFO ][http                     ] [Black Queen] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 14:15:47,365][INFO ][node                     ] [Black Queen] started
+[2018-06-17 14:15:47,574][INFO ][gateway                  ] [Black Queen] recovered [1] indices into cluster_state
+[2018-06-17 14:15:48,344][INFO ][cluster.routing.allocation] [Black Queen] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][1]] ...]).
+[2018-06-17 14:18:01,297][INFO ][node                     ] [Barnacle] version[2.4.0], pid[3064], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 14:18:01,298][INFO ][node                     ] [Barnacle] initializing ...
+[2018-06-17 14:18:01,737][INFO ][plugins                  ] [Barnacle] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 14:18:01,758][INFO ][env                      ] [Barnacle] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 14:18:01,758][INFO ][env                      ] [Barnacle] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 14:18:03,226][INFO ][node                     ] [Barnacle] initialized
+[2018-06-17 14:18:03,226][INFO ][node                     ] [Barnacle] starting ...
+[2018-06-17 14:18:03,466][INFO ][transport                ] [Barnacle] publish_address {127.0.0.1:9301}, bound_addresses {127.0.0.1:9301}, {[::1]:9301}
+[2018-06-17 14:18:03,468][INFO ][discovery                ] [Barnacle] elastic-cluster/ef2zqEXdQCuI9bkjd3yNZg
+[2018-06-17 14:18:07,510][INFO ][cluster.service          ] [Black Queen] added {{Barnacle}{ef2zqEXdQCuI9bkjd3yNZg}{127.0.0.1}{127.0.0.1:9301},}, reason: zen-disco-join(join from node[{Barnacle}{ef2zqEXdQCuI9bkjd3yNZg}{127.0.0.1}{127.0.0.1:9301}])
+[2018-06-17 14:18:07,515][INFO ][cluster.service          ] [Barnacle] detected_master {Black Queen}{s7JvHs-GRHqiIyOuE_KYlw}{127.0.0.1}{127.0.0.1:9300}, added {{Black Queen}{s7JvHs-GRHqiIyOuE_KYlw}{127.0.0.1}{127.0.0.1:9300},}, reason: zen-disco-receive(from master [{Black Queen}{s7JvHs-GRHqiIyOuE_KYlw}{127.0.0.1}{127.0.0.1:9300}])
+[2018-06-17 14:18:07,845][INFO ][http                     ] [Barnacle] publish_address {127.0.0.1:9201}, bound_addresses {127.0.0.1:9201}, {[::1]:9201}
+[2018-06-17 14:18:07,845][INFO ][node                     ] [Barnacle] started
+[2018-06-17 14:18:07,910][WARN ][transport                ] [Barnacle] Transport response handler not found of id [16]
+[2018-06-17 14:18:07,912][WARN ][transport                ] [Barnacle] Transport response handler not found of id [17]
+[2018-06-17 14:18:12,378][WARN ][transport                ] [Barnacle] Transport response handler not found of id [27]
+[2018-06-17 14:18:13,941][WARN ][transport                ] [Barnacle] Transport response handler not found of id [32]
+[2018-06-17 14:18:16,707][INFO ][cluster.routing.allocation] [Black Queen] Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[sensors][4]] ...]).
+[2018-06-17 14:18:33,868][INFO ][node                     ] [Barnacle] stopping ...
+[2018-06-17 14:18:33,889][INFO ][cluster.routing.allocation] [Black Queen] Cluster health status changed from [GREEN] to [YELLOW] (reason: [{Barnacle}{ef2zqEXdQCuI9bkjd3yNZg}{127.0.0.1}{127.0.0.1:9301} left]).
+[2018-06-17 14:18:33,890][INFO ][cluster.service          ] [Black Queen] removed {{Barnacle}{ef2zqEXdQCuI9bkjd3yNZg}{127.0.0.1}{127.0.0.1:9301},}, reason: zen-disco-node-left({Barnacle}{ef2zqEXdQCuI9bkjd3yNZg}{127.0.0.1}{127.0.0.1:9301}), reason(left)
+[2018-06-17 14:18:33,893][INFO ][cluster.routing          ] [Black Queen] delaying allocation for [5] unassigned shards, next check in [1m]
+[2018-06-17 14:18:33,989][INFO ][node                     ] [Barnacle] stopped
+[2018-06-17 14:18:33,990][INFO ][node                     ] [Barnacle] closing ...
+[2018-06-17 14:18:33,993][INFO ][node                     ] [Barnacle] closed
+[2018-06-17 14:18:50,423][INFO ][node                     ] [Bushwacker] version[2.4.0], pid[576], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 14:18:50,424][INFO ][node                     ] [Bushwacker] initializing ...
+[2018-06-17 14:18:50,799][INFO ][plugins                  ] [Bushwacker] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 14:18:50,820][INFO ][env                      ] [Bushwacker] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 14:18:50,820][INFO ][env                      ] [Bushwacker] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 14:18:52,376][INFO ][node                     ] [Bushwacker] initialized
+[2018-06-17 14:18:52,376][INFO ][node                     ] [Bushwacker] starting ...
+[2018-06-17 14:18:52,600][INFO ][transport                ] [Bushwacker] publish_address {127.0.0.1:9301}, bound_addresses {127.0.0.1:9301}, {[::1]:9301}
+[2018-06-17 14:18:52,603][INFO ][discovery                ] [Bushwacker] elastic-cluster/riW3AuK_QziezNuZP-pSZw
+[2018-06-17 14:18:56,635][INFO ][cluster.service          ] [Black Queen] added {{Bushwacker}{riW3AuK_QziezNuZP-pSZw}{127.0.0.1}{127.0.0.1:9301},}, reason: zen-disco-join(join from node[{Bushwacker}{riW3AuK_QziezNuZP-pSZw}{127.0.0.1}{127.0.0.1:9301}])
+[2018-06-17 14:18:56,638][INFO ][cluster.service          ] [Bushwacker] detected_master {Black Queen}{s7JvHs-GRHqiIyOuE_KYlw}{127.0.0.1}{127.0.0.1:9300}, added {{Black Queen}{s7JvHs-GRHqiIyOuE_KYlw}{127.0.0.1}{127.0.0.1:9300},}, reason: zen-disco-receive(from master [{Black Queen}{s7JvHs-GRHqiIyOuE_KYlw}{127.0.0.1}{127.0.0.1:9300}])
+[2018-06-17 14:18:57,355][INFO ][http                     ] [Bushwacker] publish_address {127.0.0.1:9201}, bound_addresses {127.0.0.1:9201}, {[::1]:9201}
+[2018-06-17 14:18:57,355][INFO ][node                     ] [Bushwacker] started
+[2018-06-17 14:19:01,289][WARN ][transport                ] [Bushwacker] Transport response handler not found of id [27]
+[2018-06-17 14:19:03,382][INFO ][cluster.routing.allocation] [Black Queen] Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[sensors][4]] ...]).
+[2018-06-17 14:20:18,558][INFO ][node                     ] [Bushwacker] stopping ...
+[2018-06-17 14:20:18,576][INFO ][cluster.routing.allocation] [Black Queen] Cluster health status changed from [GREEN] to [YELLOW] (reason: [{Bushwacker}{riW3AuK_QziezNuZP-pSZw}{127.0.0.1}{127.0.0.1:9301} left]).
+[2018-06-17 14:20:18,577][INFO ][cluster.service          ] [Black Queen] removed {{Bushwacker}{riW3AuK_QziezNuZP-pSZw}{127.0.0.1}{127.0.0.1:9301},}, reason: zen-disco-node-left({Bushwacker}{riW3AuK_QziezNuZP-pSZw}{127.0.0.1}{127.0.0.1:9301}), reason(left)
+[2018-06-17 14:20:18,584][INFO ][cluster.routing          ] [Black Queen] delaying allocation for [5] unassigned shards, next check in [1m]
+[2018-06-17 14:20:18,659][INFO ][node                     ] [Bushwacker] stopped
+[2018-06-17 14:20:18,659][INFO ][node                     ] [Bushwacker] closing ...
+[2018-06-17 14:20:18,663][INFO ][node                     ] [Bushwacker] closed
+[2018-06-17 14:20:32,272][INFO ][node                     ] [Black Queen] stopping ...
+[2018-06-17 14:20:32,429][INFO ][node                     ] [Black Queen] stopped
+[2018-06-17 14:20:32,430][INFO ][node                     ] [Black Queen] closing ...
+[2018-06-17 14:20:32,437][INFO ][node                     ] [Black Queen] closed
+[2018-06-17 14:20:49,825][INFO ][node                     ] [Feline] version[2.4.0], pid[10996], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 14:20:49,825][INFO ][node                     ] [Feline] initializing ...
+[2018-06-17 14:20:50,309][INFO ][plugins                  ] [Feline] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 14:20:50,328][INFO ][env                      ] [Feline] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 14:20:50,328][INFO ][env                      ] [Feline] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 14:20:51,774][INFO ][node                     ] [Feline] initialized
+[2018-06-17 14:20:51,774][INFO ][node                     ] [Feline] starting ...
+[2018-06-17 14:20:52,017][INFO ][transport                ] [Feline] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 14:20:52,019][INFO ][discovery                ] [Feline] elastic-cluster/CZtd-5FlSEqwSShR9HVovA
+[2018-06-17 14:20:52,964][DEBUG][action.admin.indices.exists.indices] [Feline] no known master node, scheduling a retry
+[2018-06-17 14:20:56,078][INFO ][cluster.service          ] [Feline] new_master {Feline}{CZtd-5FlSEqwSShR9HVovA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 14:20:56,264][INFO ][gateway                  ] [Feline] recovered [1] indices into cluster_state
+[2018-06-17 14:20:56,278][INFO ][http                     ] [Feline] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 14:20:56,278][INFO ][node                     ] [Feline] started
+[2018-06-17 14:20:57,314][INFO ][cluster.routing.allocation] [Feline] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][0]] ...]).
+[2018-06-17 14:21:10,699][INFO ][node                     ] [Feline] stopping ...
+[2018-06-17 14:21:10,821][INFO ][node                     ] [Feline] stopped
+[2018-06-17 14:21:10,821][INFO ][node                     ] [Feline] closing ...
+[2018-06-17 14:21:10,825][INFO ][node                     ] [Feline] closed
+[2018-06-17 14:22:34,621][INFO ][node                     ] [Astra] version[2.4.0], pid[1600], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 14:22:34,621][INFO ][node                     ] [Astra] initializing ...
+[2018-06-17 14:22:35,019][INFO ][plugins                  ] [Astra] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 14:22:35,036][INFO ][env                      ] [Astra] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 14:22:35,036][INFO ][env                      ] [Astra] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 14:22:36,557][INFO ][node                     ] [Astra] initialized
+[2018-06-17 14:22:36,557][INFO ][node                     ] [Astra] starting ...
+[2018-06-17 14:22:36,800][INFO ][transport                ] [Astra] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 14:22:36,802][INFO ][discovery                ] [Astra] elastic-cluster/o6_JYZZHTA62qpLbVeAY_A
+[2018-06-17 14:22:37,851][DEBUG][action.admin.indices.exists.indices] [Astra] no known master node, scheduling a retry
+[2018-06-17 14:22:40,847][INFO ][cluster.service          ] [Astra] new_master {Astra}{o6_JYZZHTA62qpLbVeAY_A}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 14:22:41,030][INFO ][http                     ] [Astra] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 14:22:41,030][INFO ][node                     ] [Astra] started
+[2018-06-17 14:22:41,057][INFO ][gateway                  ] [Astra] recovered [1] indices into cluster_state
+[2018-06-17 14:22:41,600][INFO ][cluster.routing.allocation] [Astra] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][3]] ...]).
+[2018-06-17 14:23:01,114][INFO ][node                     ] [Astra] stopping ...
+[2018-06-17 14:23:01,152][INFO ][node                     ] [Astra] stopped
+[2018-06-17 14:23:01,152][INFO ][node                     ] [Astra] closing ...
+[2018-06-17 14:23:01,154][INFO ][node                     ] [Astra] closed
+[2018-06-17 14:23:55,726][INFO ][node                     ] [Ahmet Abdol] version[2.4.0], pid[5196], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 14:23:55,726][INFO ][node                     ] [Ahmet Abdol] initializing ...
+[2018-06-17 14:23:55,990][INFO ][plugins                  ] [Ahmet Abdol] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 14:23:56,002][INFO ][env                      ] [Ahmet Abdol] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 14:23:56,002][INFO ][env                      ] [Ahmet Abdol] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 14:23:57,013][INFO ][node                     ] [Ahmet Abdol] initialized
+[2018-06-17 14:23:57,013][INFO ][node                     ] [Ahmet Abdol] starting ...
+[2018-06-17 14:23:57,215][INFO ][transport                ] [Ahmet Abdol] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 14:23:57,218][INFO ][discovery                ] [Ahmet Abdol] elastic-cluster/0i4AclGnR8-OmfXudRQQPQ
+[2018-06-17 14:24:01,235][INFO ][cluster.service          ] [Ahmet Abdol] new_master {Ahmet Abdol}{0i4AclGnR8-OmfXudRQQPQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 14:24:01,398][INFO ][http                     ] [Ahmet Abdol] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 14:24:01,398][INFO ][node                     ] [Ahmet Abdol] started
+[2018-06-17 14:24:01,402][INFO ][gateway                  ] [Ahmet Abdol] recovered [1] indices into cluster_state
+[2018-06-17 14:24:02,040][INFO ][cluster.routing.allocation] [Ahmet Abdol] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][4]] ...]).
+[2018-06-17 14:24:18,573][INFO ][node                     ] [Ahmet Abdol] stopping ...
+[2018-06-17 14:24:18,711][INFO ][node                     ] [Ahmet Abdol] stopped
+[2018-06-17 14:24:18,711][INFO ][node                     ] [Ahmet Abdol] closing ...
+[2018-06-17 14:24:18,714][INFO ][node                     ] [Ahmet Abdol] closed
+[2018-06-17 14:24:32,650][INFO ][node                     ] [Sise-Neg] version[2.4.0], pid[10320], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 14:24:32,651][INFO ][node                     ] [Sise-Neg] initializing ...
+[2018-06-17 14:24:32,905][INFO ][plugins                  ] [Sise-Neg] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 14:24:32,917][INFO ][env                      ] [Sise-Neg] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 14:24:32,917][INFO ][env                      ] [Sise-Neg] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 14:24:33,903][INFO ][node                     ] [Sise-Neg] initialized
+[2018-06-17 14:24:33,903][INFO ][node                     ] [Sise-Neg] starting ...
+[2018-06-17 14:24:34,100][INFO ][transport                ] [Sise-Neg] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 14:24:34,103][INFO ][discovery                ] [Sise-Neg] elastic-cluster/_WoFcr-3TRakHV_mI7MOow
+[2018-06-17 14:24:38,153][INFO ][cluster.service          ] [Sise-Neg] new_master {Sise-Neg}{_WoFcr-3TRakHV_mI7MOow}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 14:24:38,332][INFO ][gateway                  ] [Sise-Neg] recovered [1] indices into cluster_state
+[2018-06-17 14:24:38,339][INFO ][http                     ] [Sise-Neg] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 14:24:38,339][INFO ][node                     ] [Sise-Neg] started
+[2018-06-17 14:24:39,129][INFO ][cluster.routing.allocation] [Sise-Neg] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][4]] ...]).
+[2018-06-17 14:24:53,618][INFO ][node                     ] [Sise-Neg] stopping ...
+[2018-06-17 14:24:53,730][INFO ][node                     ] [Sise-Neg] stopped
+[2018-06-17 14:24:53,730][INFO ][node                     ] [Sise-Neg] closing ...
+[2018-06-17 14:24:53,733][INFO ][node                     ] [Sise-Neg] closed
+[2018-06-17 14:25:12,510][INFO ][node                     ] [Whiplash] version[2.4.0], pid[5768], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 14:25:12,511][INFO ][node                     ] [Whiplash] initializing ...
+[2018-06-17 14:25:12,777][INFO ][plugins                  ] [Whiplash] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 14:25:12,788][INFO ][env                      ] [Whiplash] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 14:25:12,788][INFO ][env                      ] [Whiplash] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 14:25:13,822][INFO ][node                     ] [Whiplash] initialized
+[2018-06-17 14:25:13,822][INFO ][node                     ] [Whiplash] starting ...
+[2018-06-17 14:25:14,021][INFO ][transport                ] [Whiplash] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 14:25:14,023][INFO ][discovery                ] [Whiplash] elastic-cluster/ciq_aC5ZTDOPIT68tSU8RA
+[2018-06-17 14:25:18,042][INFO ][cluster.service          ] [Whiplash] new_master {Whiplash}{ciq_aC5ZTDOPIT68tSU8RA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 14:25:18,157][INFO ][gateway                  ] [Whiplash] recovered [1] indices into cluster_state
+[2018-06-17 14:25:18,199][INFO ][http                     ] [Whiplash] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 14:25:18,199][INFO ][node                     ] [Whiplash] started
+[2018-06-17 14:25:18,921][INFO ][cluster.routing.allocation] [Whiplash] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][0]] ...]).
+[2018-06-17 14:25:20,985][INFO ][node                     ] [Whiplash] stopping ...
+[2018-06-17 14:25:21,023][INFO ][node                     ] [Whiplash] stopped
+[2018-06-17 14:25:21,023][INFO ][node                     ] [Whiplash] closing ...
+[2018-06-17 14:25:21,025][INFO ][node                     ] [Whiplash] closed
+[2018-06-17 14:25:43,928][INFO ][node                     ] [Alexander Goodwin Pierce] version[2.4.0], pid[3592], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 14:25:43,928][INFO ][node                     ] [Alexander Goodwin Pierce] initializing ...
+[2018-06-17 14:25:44,311][INFO ][plugins                  ] [Alexander Goodwin Pierce] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 14:25:44,330][INFO ][env                      ] [Alexander Goodwin Pierce] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 14:25:44,330][INFO ][env                      ] [Alexander Goodwin Pierce] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 14:25:45,863][INFO ][node                     ] [Alexander Goodwin Pierce] initialized
+[2018-06-17 14:25:45,863][INFO ][node                     ] [Alexander Goodwin Pierce] starting ...
+[2018-06-17 14:25:46,112][INFO ][transport                ] [Alexander Goodwin Pierce] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 14:25:46,115][INFO ][discovery                ] [Alexander Goodwin Pierce] elastic-cluster/5wgBE6dJRI6jJ4bgw3i2hg
+[2018-06-17 14:25:47,221][DEBUG][action.admin.indices.exists.indices] [Alexander Goodwin Pierce] no known master node, scheduling a retry
+[2018-06-17 14:25:50,136][INFO ][cluster.service          ] [Alexander Goodwin Pierce] new_master {Alexander Goodwin Pierce}{5wgBE6dJRI6jJ4bgw3i2hg}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 14:25:50,205][INFO ][gateway                  ] [Alexander Goodwin Pierce] recovered [1] indices into cluster_state
+[2018-06-17 14:25:50,333][INFO ][http                     ] [Alexander Goodwin Pierce] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 14:25:50,333][INFO ][node                     ] [Alexander Goodwin Pierce] started
+[2018-06-17 14:25:50,657][INFO ][cluster.routing.allocation] [Alexander Goodwin Pierce] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][2], [sensors][2]] ...]).
+[2018-06-17 14:26:08,794][INFO ][node                     ] [Alexander Goodwin Pierce] stopping ...
+[2018-06-17 14:26:08,922][INFO ][node                     ] [Alexander Goodwin Pierce] stopped
+[2018-06-17 14:26:08,922][INFO ][node                     ] [Alexander Goodwin Pierce] closing ...
+[2018-06-17 14:26:08,926][INFO ][node                     ] [Alexander Goodwin Pierce] closed
+[2018-06-17 14:26:46,213][INFO ][node                     ] [Winky Man] version[2.4.0], pid[2532], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 14:26:46,213][INFO ][node                     ] [Winky Man] initializing ...
+[2018-06-17 14:26:46,650][INFO ][plugins                  ] [Winky Man] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 14:26:46,669][INFO ][env                      ] [Winky Man] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 14:26:46,670][INFO ][env                      ] [Winky Man] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 14:26:48,060][INFO ][node                     ] [Winky Man] initialized
+[2018-06-17 14:26:48,060][INFO ][node                     ] [Winky Man] starting ...
+[2018-06-17 14:26:48,269][INFO ][transport                ] [Winky Man] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 14:26:48,272][INFO ][discovery                ] [Winky Man] elastic-cluster/AN6yL8VDTC-pWpTwCovl_g
+[2018-06-17 14:26:49,268][DEBUG][action.admin.indices.exists.indices] [Winky Man] no known master node, scheduling a retry
+[2018-06-17 14:26:52,309][INFO ][cluster.service          ] [Winky Man] new_master {Winky Man}{AN6yL8VDTC-pWpTwCovl_g}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 14:26:52,493][INFO ][http                     ] [Winky Man] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 14:26:52,493][INFO ][node                     ] [Winky Man] started
+[2018-06-17 14:26:52,530][INFO ][gateway                  ] [Winky Man] recovered [1] indices into cluster_state
+[2018-06-17 14:26:53,453][INFO ][cluster.routing.allocation] [Winky Man] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][4]] ...]).
+[2018-06-17 14:26:57,513][INFO ][node                     ] [Winky Man] stopping ...
+[2018-06-17 14:26:57,598][INFO ][node                     ] [Winky Man] stopped
+[2018-06-17 14:26:57,598][INFO ][node                     ] [Winky Man] closing ...
+[2018-06-17 14:26:57,601][INFO ][node                     ] [Winky Man] closed
+[2018-06-17 14:27:25,332][INFO ][node                     ] [Dum-Dum Dugan] version[2.4.0], pid[8928], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 14:27:25,332][INFO ][node                     ] [Dum-Dum Dugan] initializing ...
+[2018-06-17 14:27:25,736][INFO ][plugins                  ] [Dum-Dum Dugan] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 14:27:25,757][INFO ][env                      ] [Dum-Dum Dugan] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 14:27:25,757][INFO ][env                      ] [Dum-Dum Dugan] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 14:27:27,162][INFO ][node                     ] [Dum-Dum Dugan] initialized
+[2018-06-17 14:27:27,162][INFO ][node                     ] [Dum-Dum Dugan] starting ...
+[2018-06-17 14:27:27,393][INFO ][transport                ] [Dum-Dum Dugan] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 14:27:27,395][INFO ][discovery                ] [Dum-Dum Dugan] elastic-cluster/Pm32bMmlSTCY8IZUdn-oqw
+[2018-06-17 14:27:28,395][DEBUG][action.admin.indices.exists.indices] [Dum-Dum Dugan] no known master node, scheduling a retry
+[2018-06-17 14:27:31,420][INFO ][cluster.service          ] [Dum-Dum Dugan] new_master {Dum-Dum Dugan}{Pm32bMmlSTCY8IZUdn-oqw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 14:27:31,573][INFO ][http                     ] [Dum-Dum Dugan] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 14:27:31,573][INFO ][node                     ] [Dum-Dum Dugan] started
+[2018-06-17 14:27:31,609][INFO ][gateway                  ] [Dum-Dum Dugan] recovered [1] indices into cluster_state
+[2018-06-17 14:27:32,358][INFO ][cluster.routing.allocation] [Dum-Dum Dugan] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][1]] ...]).
+[2018-06-17 14:27:58,944][INFO ][node                     ] [Dum-Dum Dugan] stopping ...
+[2018-06-17 14:27:58,988][INFO ][node                     ] [Dum-Dum Dugan] stopped
+[2018-06-17 14:27:58,988][INFO ][node                     ] [Dum-Dum Dugan] closing ...
+[2018-06-17 14:27:58,990][INFO ][node                     ] [Dum-Dum Dugan] closed
+[2018-06-17 14:46:07,785][INFO ][node                     ] [Scorcher] version[2.4.0], pid[4464], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 14:46:07,786][INFO ][node                     ] [Scorcher] initializing ...
+[2018-06-17 14:46:08,148][INFO ][plugins                  ] [Scorcher] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 14:46:08,165][INFO ][env                      ] [Scorcher] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 14:46:08,165][INFO ][env                      ] [Scorcher] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 14:46:09,691][INFO ][node                     ] [Scorcher] initialized
+[2018-06-17 14:46:09,691][INFO ][node                     ] [Scorcher] starting ...
+[2018-06-17 14:46:09,902][INFO ][transport                ] [Scorcher] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 14:46:09,905][INFO ][discovery                ] [Scorcher] elastic-cluster/FLhXU5ZXQbSqme6ssM4JEw
+[2018-06-17 14:46:10,911][DEBUG][action.admin.indices.exists.indices] [Scorcher] no known master node, scheduling a retry
+[2018-06-17 14:46:13,957][INFO ][cluster.service          ] [Scorcher] new_master {Scorcher}{FLhXU5ZXQbSqme6ssM4JEw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 14:46:14,084][INFO ][gateway                  ] [Scorcher] recovered [1] indices into cluster_state
+[2018-06-17 14:46:14,373][INFO ][http                     ] [Scorcher] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 14:46:14,376][INFO ][node                     ] [Scorcher] started
+[2018-06-17 14:46:14,675][INFO ][cluster.routing.allocation] [Scorcher] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][4]] ...]).
+[2018-06-17 14:46:56,928][INFO ][node                     ] [Scorcher] stopping ...
+[2018-06-17 14:46:57,075][INFO ][node                     ] [Scorcher] stopped
+[2018-06-17 14:46:57,075][INFO ][node                     ] [Scorcher] closing ...
+[2018-06-17 14:46:57,075][INFO ][node                     ] [Scorcher] closed
+[2018-06-17 14:47:52,956][INFO ][node                     ] [Madame Masque] version[2.4.0], pid[536], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 14:47:52,956][INFO ][node                     ] [Madame Masque] initializing ...
+[2018-06-17 14:47:53,325][INFO ][plugins                  ] [Madame Masque] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 14:47:53,339][INFO ][env                      ] [Madame Masque] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 14:47:53,339][INFO ][env                      ] [Madame Masque] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 14:47:54,799][INFO ][node                     ] [Madame Masque] initialized
+[2018-06-17 14:47:54,799][INFO ][node                     ] [Madame Masque] starting ...
+[2018-06-17 14:47:55,014][INFO ][transport                ] [Madame Masque] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 14:47:55,016][INFO ][discovery                ] [Madame Masque] elastic-cluster/AYBn3OcdT32vUqh8yOOJvw
+[2018-06-17 14:47:56,050][DEBUG][action.admin.indices.exists.indices] [Madame Masque] no known master node, scheduling a retry
+[2018-06-17 14:47:59,069][INFO ][cluster.service          ] [Madame Masque] new_master {Madame Masque}{AYBn3OcdT32vUqh8yOOJvw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 14:47:59,228][INFO ][gateway                  ] [Madame Masque] recovered [1] indices into cluster_state
+[2018-06-17 14:47:59,252][INFO ][http                     ] [Madame Masque] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 14:47:59,253][INFO ][node                     ] [Madame Masque] started
+[2018-06-17 14:47:59,680][INFO ][cluster.routing.allocation] [Madame Masque] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][0]] ...]).
+[2018-06-17 14:49:01,715][INFO ][node                     ] [Madame Masque] stopping ...
+[2018-06-17 14:49:01,831][INFO ][node                     ] [Madame Masque] stopped
+[2018-06-17 14:49:01,831][INFO ][node                     ] [Madame Masque] closing ...
+[2018-06-17 14:49:01,831][INFO ][node                     ] [Madame Masque] closed
+[2018-06-17 14:49:23,317][INFO ][node                     ] [Murmur II] version[2.4.0], pid[9392], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 14:49:23,318][INFO ][node                     ] [Murmur II] initializing ...
+[2018-06-17 14:49:23,691][INFO ][plugins                  ] [Murmur II] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 14:49:23,705][INFO ][env                      ] [Murmur II] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 14:49:23,706][INFO ][env                      ] [Murmur II] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 14:49:25,083][INFO ][node                     ] [Murmur II] initialized
+[2018-06-17 14:49:25,083][INFO ][node                     ] [Murmur II] starting ...
+[2018-06-17 14:49:25,301][INFO ][transport                ] [Murmur II] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 14:49:25,304][INFO ][discovery                ] [Murmur II] elastic-cluster/GmBfjO8zRMWUeGbnZsftRA
+[2018-06-17 14:49:26,321][DEBUG][action.admin.indices.exists.indices] [Murmur II] no known master node, scheduling a retry
+[2018-06-17 14:49:29,352][INFO ][cluster.service          ] [Murmur II] new_master {Murmur II}{GmBfjO8zRMWUeGbnZsftRA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 14:49:29,446][INFO ][gateway                  ] [Murmur II] recovered [1] indices into cluster_state
+[2018-06-17 14:49:29,573][INFO ][http                     ] [Murmur II] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 14:49:29,573][INFO ][node                     ] [Murmur II] started
+[2018-06-17 14:49:30,101][INFO ][cluster.routing.allocation] [Murmur II] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][4]] ...]).
+[2018-06-17 14:52:00,264][INFO ][node                     ] [Murmur II] stopping ...
+[2018-06-17 14:52:00,333][INFO ][node                     ] [Murmur II] stopped
+[2018-06-17 14:52:00,333][INFO ][node                     ] [Murmur II] closing ...
+[2018-06-17 14:52:00,349][INFO ][node                     ] [Murmur II] closed
+[2018-06-17 14:53:24,134][INFO ][node                     ] [Sidewinder] version[2.4.0], pid[10808], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 14:53:24,134][INFO ][node                     ] [Sidewinder] initializing ...
+[2018-06-17 14:53:24,503][INFO ][plugins                  ] [Sidewinder] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 14:53:24,520][INFO ][env                      ] [Sidewinder] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 14:53:24,520][INFO ][env                      ] [Sidewinder] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 14:53:26,013][INFO ][node                     ] [Sidewinder] initialized
+[2018-06-17 14:53:26,013][INFO ][node                     ] [Sidewinder] starting ...
+[2018-06-17 14:53:26,234][INFO ][transport                ] [Sidewinder] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 14:53:26,237][INFO ][discovery                ] [Sidewinder] elastic-cluster/Rv5rXDw9ReqbI9BfduxUSg
+[2018-06-17 14:53:27,317][DEBUG][action.admin.indices.exists.indices] [Sidewinder] no known master node, scheduling a retry
+[2018-06-17 14:53:30,289][INFO ][cluster.service          ] [Sidewinder] new_master {Sidewinder}{Rv5rXDw9ReqbI9BfduxUSg}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 14:53:30,377][INFO ][gateway                  ] [Sidewinder] recovered [1] indices into cluster_state
+[2018-06-17 14:53:30,502][INFO ][http                     ] [Sidewinder] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 14:53:30,502][INFO ][node                     ] [Sidewinder] started
+[2018-06-17 14:53:30,810][INFO ][cluster.routing.allocation] [Sidewinder] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][4]] ...]).
+[2018-06-17 15:02:21,741][INFO ][bootstrap                ] running graceful exit on windows
+[2018-06-17 15:02:21,741][INFO ][node                     ] [Sidewinder] stopping ...
+[2018-06-17 15:02:21,791][INFO ][node                     ] [Sidewinder] stopped
+[2018-06-17 15:02:21,791][INFO ][node                     ] [Sidewinder] closing ...
+[2018-06-17 15:02:21,791][INFO ][node                     ] [Sidewinder] closed
+[2018-06-17 15:04:42,434][INFO ][node                     ] [Zero-G] version[2.4.0], pid[10604], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 15:04:42,434][INFO ][node                     ] [Zero-G] initializing ...
+[2018-06-17 15:04:42,818][INFO ][plugins                  ] [Zero-G] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 15:04:42,836][INFO ][env                      ] [Zero-G] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 15:04:42,836][INFO ][env                      ] [Zero-G] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 15:04:44,280][INFO ][node                     ] [Zero-G] initialized
+[2018-06-17 15:04:44,280][INFO ][node                     ] [Zero-G] starting ...
+[2018-06-17 15:04:44,498][INFO ][transport                ] [Zero-G] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 15:04:44,500][INFO ][discovery                ] [Zero-G] elastic-cluster/JK-N-kBuQeC2fv8C4xcppg
+[2018-06-17 15:04:45,517][DEBUG][action.admin.indices.exists.indices] [Zero-G] no known master node, scheduling a retry
+[2018-06-17 15:04:48,540][INFO ][cluster.service          ] [Zero-G] new_master {Zero-G}{JK-N-kBuQeC2fv8C4xcppg}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 15:04:48,621][INFO ][gateway                  ] [Zero-G] recovered [1] indices into cluster_state
+[2018-06-17 15:04:48,748][INFO ][http                     ] [Zero-G] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 15:04:48,748][INFO ][node                     ] [Zero-G] started
+[2018-06-17 15:04:49,148][INFO ][cluster.routing.allocation] [Zero-G] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][1]] ...]).
+[2018-06-17 15:04:59,476][INFO ][bootstrap                ] running graceful exit on windows
+[2018-06-17 15:04:59,476][INFO ][node                     ] [Zero-G] stopping ...
+[2018-06-17 15:04:59,577][INFO ][node                     ] [Zero-G] stopped
+[2018-06-17 15:04:59,577][INFO ][node                     ] [Zero-G] closing ...
+[2018-06-17 15:04:59,577][INFO ][node                     ] [Zero-G] closed
+[2018-06-17 15:05:13,686][INFO ][node                     ] [Black Marvel] version[2.4.0], pid[1868], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 15:05:13,686][INFO ][node                     ] [Black Marvel] initializing ...
+[2018-06-17 15:05:14,032][INFO ][plugins                  ] [Black Marvel] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 15:05:14,047][INFO ][env                      ] [Black Marvel] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 15:05:14,047][INFO ][env                      ] [Black Marvel] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 15:05:15,530][INFO ][node                     ] [Black Marvel] initialized
+[2018-06-17 15:05:15,530][INFO ][node                     ] [Black Marvel] starting ...
+[2018-06-17 15:05:15,739][INFO ][transport                ] [Black Marvel] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 15:05:15,741][INFO ][discovery                ] [Black Marvel] elastic-cluster/wYD6N6VORZewkdkQOnW7dQ
+[2018-06-17 15:05:16,735][DEBUG][action.admin.indices.exists.indices] [Black Marvel] no known master node, scheduling a retry
+[2018-06-17 15:05:19,795][INFO ][cluster.service          ] [Black Marvel] new_master {Black Marvel}{wYD6N6VORZewkdkQOnW7dQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 15:05:19,920][INFO ][gateway                  ] [Black Marvel] recovered [1] indices into cluster_state
+[2018-06-17 15:05:19,986][INFO ][http                     ] [Black Marvel] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 15:05:19,986][INFO ][node                     ] [Black Marvel] started
+[2018-06-17 15:05:20,368][INFO ][cluster.routing.allocation] [Black Marvel] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][4]] ...]).
+[2018-06-17 15:05:32,034][INFO ][bootstrap                ] running graceful exit on windows
+[2018-06-17 15:05:32,034][INFO ][node                     ] [Black Marvel] stopping ...
+[2018-06-17 15:05:32,071][INFO ][node                     ] [Black Marvel] stopped
+[2018-06-17 15:05:32,071][INFO ][node                     ] [Black Marvel] closing ...
+[2018-06-17 15:05:32,071][INFO ][node                     ] [Black Marvel] closed
+[2018-06-17 15:05:38,401][INFO ][node                     ] [Mercy] version[2.4.0], pid[9716], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 15:05:38,401][INFO ][node                     ] [Mercy] initializing ...
+[2018-06-17 15:05:38,768][INFO ][plugins                  ] [Mercy] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 15:05:38,780][INFO ][env                      ] [Mercy] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 15:05:38,781][INFO ][env                      ] [Mercy] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 15:05:40,223][INFO ][node                     ] [Mercy] initialized
+[2018-06-17 15:05:40,223][INFO ][node                     ] [Mercy] starting ...
+[2018-06-17 15:05:40,438][INFO ][transport                ] [Mercy] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 15:05:40,441][INFO ][discovery                ] [Mercy] elastic-cluster/buU7pHI9T_uuQjRUr0y78g
+[2018-06-17 15:05:41,489][DEBUG][action.admin.indices.exists.indices] [Mercy] no known master node, scheduling a retry
+[2018-06-17 15:05:44,493][INFO ][cluster.service          ] [Mercy] new_master {Mercy}{buU7pHI9T_uuQjRUr0y78g}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 15:05:44,594][INFO ][gateway                  ] [Mercy] recovered [1] indices into cluster_state
+[2018-06-17 15:05:44,703][INFO ][http                     ] [Mercy] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 15:05:44,703][INFO ][node                     ] [Mercy] started
+[2018-06-17 15:05:45,095][INFO ][cluster.routing.allocation] [Mercy] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][4]] ...]).
+[2018-06-17 15:07:18,616][INFO ][bootstrap                ] running graceful exit on windows
+[2018-06-17 15:07:18,616][INFO ][node                     ] [Mercy] stopping ...
+[2018-06-17 15:07:18,700][INFO ][node                     ] [Mercy] stopped
+[2018-06-17 15:07:18,700][INFO ][node                     ] [Mercy] closing ...
+[2018-06-17 15:07:18,700][INFO ][node                     ] [Mercy] closed
+[2018-06-17 15:09:06,795][INFO ][node                     ] [Amahl Farouk] version[2.4.0], pid[3172], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 15:09:06,795][INFO ][node                     ] [Amahl Farouk] initializing ...
+[2018-06-17 15:09:07,172][INFO ][plugins                  ] [Amahl Farouk] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 15:09:07,187][INFO ][env                      ] [Amahl Farouk] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 15:09:07,187][INFO ][env                      ] [Amahl Farouk] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 15:09:08,679][INFO ][node                     ] [Amahl Farouk] initialized
+[2018-06-17 15:09:08,679][INFO ][node                     ] [Amahl Farouk] starting ...
+[2018-06-17 15:09:08,890][INFO ][transport                ] [Amahl Farouk] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 15:09:08,892][INFO ][discovery                ] [Amahl Farouk] elastic-cluster/okgwhTCSQgOQ4D0dBQBTSQ
+[2018-06-17 15:09:09,925][DEBUG][action.admin.indices.exists.indices] [Amahl Farouk] no known master node, scheduling a retry
+[2018-06-17 15:09:12,944][INFO ][cluster.service          ] [Amahl Farouk] new_master {Amahl Farouk}{okgwhTCSQgOQ4D0dBQBTSQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 15:09:13,063][INFO ][gateway                  ] [Amahl Farouk] recovered [1] indices into cluster_state
+[2018-06-17 15:09:13,152][INFO ][http                     ] [Amahl Farouk] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 15:09:13,152][INFO ][node                     ] [Amahl Farouk] started
+[2018-06-17 15:09:13,598][INFO ][cluster.routing.allocation] [Amahl Farouk] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][4]] ...]).
+[2018-06-17 15:10:05,806][INFO ][bootstrap                ] running graceful exit on windows
+[2018-06-17 15:10:05,806][INFO ][node                     ] [Amahl Farouk] stopping ...
+[2018-06-17 15:10:05,844][INFO ][node                     ] [Amahl Farouk] stopped
+[2018-06-17 15:10:05,844][INFO ][node                     ] [Amahl Farouk] closing ...
+[2018-06-17 15:10:05,847][INFO ][node                     ] [Amahl Farouk] closed
+[2018-06-17 15:10:11,616][INFO ][node                     ] [Dum-Dum Dugan] version[2.4.0], pid[11004], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-06-17 15:10:11,617][INFO ][node                     ] [Dum-Dum Dugan] initializing ...
+[2018-06-17 15:10:11,967][INFO ][plugins                  ] [Dum-Dum Dugan] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-06-17 15:10:11,985][INFO ][env                      ] [Dum-Dum Dugan] using [1] data paths, mounts [[New Volume (E:)]], net usable_space [412gb], net total_space [464.9gb], spins? [unknown], types [NTFS]
+[2018-06-17 15:10:11,985][INFO ][env                      ] [Dum-Dum Dugan] heap size [910.5mb], compressed ordinary object pointers [true]
+[2018-06-17 15:10:13,365][INFO ][node                     ] [Dum-Dum Dugan] initialized
+[2018-06-17 15:10:13,366][INFO ][node                     ] [Dum-Dum Dugan] starting ...
+[2018-06-17 15:10:13,589][INFO ][transport                ] [Dum-Dum Dugan] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-06-17 15:10:13,591][INFO ][discovery                ] [Dum-Dum Dugan] elastic-cluster/aEroZGR7Ro-c-fjDV8UbZw
+[2018-06-17 15:10:14,640][DEBUG][action.admin.indices.exists.indices] [Dum-Dum Dugan] no known master node, scheduling a retry
+[2018-06-17 15:10:17,641][INFO ][cluster.service          ] [Dum-Dum Dugan] new_master {Dum-Dum Dugan}{aEroZGR7Ro-c-fjDV8UbZw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-06-17 15:10:17,809][INFO ][gateway                  ] [Dum-Dum Dugan] recovered [1] indices into cluster_state
+[2018-06-17 15:10:17,827][INFO ][http                     ] [Dum-Dum Dugan] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-06-17 15:10:17,827][INFO ][node                     ] [Dum-Dum Dugan] started
+[2018-06-17 15:10:18,261][INFO ][cluster.routing.allocation] [Dum-Dum Dugan] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sensors][2]] ...]).
+[2018-06-17 15:10:29,567][INFO ][bootstrap                ] running graceful exit on windows
+[2018-06-17 15:10:29,567][INFO ][node                     ] [Dum-Dum Dugan] stopping ...
+[2018-06-17 15:10:29,602][INFO ][node                     ] [Dum-Dum Dugan] stopped
+[2018-06-17 15:10:29,602][INFO ][node                     ] [Dum-Dum Dugan] closing ...
+[2018-06-17 15:10:29,605][INFO ][node                     ] [Dum-Dum Dugan] closed
