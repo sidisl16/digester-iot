@@ -16,7 +16,7 @@ const int TEMP2DIGIN = 3;
 
 
 int sensorValue = 0; 
-int moistureCalliberatedvalue = 680;
+int moistureCalliberatedvalue = 1024;
 unsigned long int avgValue; 
 float b;
 int buf[10],temp;
@@ -128,7 +128,7 @@ void sendReadings(){
     float temp2 = getTemp2Reading();// 95.0;//95.0;
     float ph =  getPhReading();//7.0;//
     float flowRate = 0;
-    float moisture = 600;//getMoistureReading();
+    float moisture =getMoistureReading(); //600;//
     long timeMillis = millis();
     String message = formJSONMessage(temp1,temp2,ph,flowRate,moisture,timeMillis);
 
