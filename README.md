@@ -23,7 +23,7 @@ Connect Sensor Box:
 Setup and run Applications: 
 1. Go to scripts folder from downloaded source
 2. To start application double click on start-all.bat
-3.. It will start Communication-hub, ElasticSearch and Grafana server, 
+3. It will start Communication-hub, ElasticSearch and Grafana server, 
     we will be able to see logs of all three application of different terminals
 4. It will also open a desktop application for device control
 5. In the application click on refresh button to see all connected COM ports
