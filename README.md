@@ -1,7 +1,7 @@
 # digester-iot
 An IOT project to monitor a mini digester for household waste
 
-Execution steps for Windows 7 and Above:
+Execution steps on Windows 7 and Above:
 
 Download Source Code:
 1. Install git client in your PC - https://git-scm.com/download/win
@@ -39,6 +39,6 @@ Stop Application:
 1. Go to scripts folder and double click on stop-all.bat
 
 Disclaimer: 
-This project is made for educational purpose and cannot be used for commercial.
+This project is made for educational purpose and cannot be commercially.
 All open source used in this project are under Apache 2.0 lisence.
 http://www.apache.org/licenses/LICENSE-2.0
