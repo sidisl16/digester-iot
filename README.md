@@ -3,6 +3,9 @@ An IOT project to monitor a mini digester for household waste
 
 Execution steps on Windows 7 and Above:
 
+Prerequisite:
+1. Install JAVA jdk 1.8 - http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+
 Download Source Code:
 1. Install git client in your PC - https://git-scm.com/download/win
 2. Create a folder and move inside 
@@ -27,7 +30,7 @@ Setup and run Applications:
     we will be able to see logs of all three application on different terminals
 4. It will also open a desktop application for device control
 5. In the application click on refresh button to see all connected COM ports
-6. Select the Arduino COM port - refer point no. 2.5 of prevoius section
+6. Select the Arduino COM port - refer point no. 2.5 of prevous section
 7. Click on Connect button, once connected the status will change from Red to Green
 8. We will also able to see sensor data in the payload section of the application
 
