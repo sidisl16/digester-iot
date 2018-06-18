@@ -24,10 +24,10 @@ Setup and run Applications:
 1. Go to scripts folder from downloaded source
 2. To start application double click on start-all.bat
 3. It will start Communication-hub, ElasticSearch and Grafana server, 
-    we will be able to see logs of all three application of different terminals
+    we will be able to see logs of all three application on different terminals
 4. It will also open a desktop application for device control
 5. In the application click on refresh button to see all connected COM ports
-6. Select the Arduino COM port - refer point no. 6.5
+6. Select the Arduino COM port - refer point no. 2.5 of prevoius section
 7. Click on Connect button, once connected the status will change from Red to Green
 8. We will also able to see sensor data in the payload section of the application
 
