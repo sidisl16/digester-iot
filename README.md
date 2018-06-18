@@ -20,7 +20,7 @@ Connect Sensor Box:
     5. In device manager you will see Arduino com port under Ports(COM and LPT)
 
 Setup and run Applications: 
-1. Navigate to scripts folder from downloaded source
+1. Go to scripts folder from downloaded source
 2. To start application double click on start-all.bat
 3.. It will start Communication-hub, ElasticSearch and Grafana server, 
     we will be able to see logs of all three application of different terminals
@@ -35,6 +35,8 @@ View Dashboard:
 2. Default userId and password for Grafana is admin and admin respectively
 3. Select Digestor Monitoring dashboard.
 
+Stop Application:
+1. Go to scripts folder and double click on stop-all.bat
 
 Disclaimer: 
 This project is made for educational purpose and cannot be used for commercial.
