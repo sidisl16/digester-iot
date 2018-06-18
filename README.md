@@ -7,9 +7,10 @@ Download Source Code:
 1. Install git client in your PC - https://git-scm.com/download/win
 2. Create a folder and move inside 
 3. Right click and open git bash
-4. In the command line type the following command to clone/download the source code
-   git clone https://github.com/sidisl16/digester-iot.git
-
+4. In the command line type the following commands to clone/download the source code
+   1. git clone https://github.com/sidisl16/digester-iot.git
+   2. git checkout V2
+   
 Connect Sensor Box:
 1. Connect the sensors to the box (marked on the upper side of the box) and connect serial cable to PC through USB.
 2. Windows automatically searches the Arduino driver and installs it, if not then
